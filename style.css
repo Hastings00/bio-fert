@@ -1,0 +1,122 @@
+/* Continuing from the previous CSS section */
+
+nav {
+
+    background: linear-gradient(to right, #3498db, #ffd700, #c0c0c0, #ffffff);
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+header {
+
+    background: #333;
+
+    color: white;
+
+    padding: 20px 0;
+
+}
+
+nav ul {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: circular;
+
+    justify-content: space-around;
+
+}
+
+nav li {
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: color 0.3s;
+
+}
+
+nav li:hover {
+
+    color: #ecf0f1;
+
+}
+
+.container {
+
+    /* Container styles go here */
+
+}
+
+section {
+
+    margin-bottom: 30px;
+
+}
+
+h2 {
+
+    color: #2c3e50;
+
+}
+
+h3 {
+
+    color: #3498db;
+
+}
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+
+}
+
+article {
+
+    background-color: #ecf0f1;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+}
+
+footer {
+
+    background-color: #e74c3c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 10px;
+
+    position: bottom;
+
+    bottom: 0;
+
+    width: 100%;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+

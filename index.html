@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+
+    <title>Innoverse</title>
+
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+
+    <script src="scripts/script.js"></script>
+
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+
+<nav>
+
+    <ul>
+
+        <li>Home</li>
+
+        <li>Categories</li>
+
+        <li>User Profile</li>
+
+        <li>Collaboration</li>
+
+        <li>Projects</li>
+
+        <li>Resources</li>
+
+        <li>Events</li>
+
+        <li>Q&A</li>
+
+        <li>Innovation Challenges</li>
+
+    </ul>
+
+</nav>
+
+<!-- Main content area -->
+
+<div class="container">
+
+    <section class="user-profile">
+
+        <h2>User Profile</h2>
+
+        <div>
+
+            <img src="user-avatar.jpg" alt="User Avatar">
+
+            <h3>Hastings Eneya Phiri</h3>
+
+            <p>Software Engineer passionate about AI and machine learning.</p>
+
+            <!-- Additional user profile details -->
+
+        </div>
+
+    </section>
+
+    <!-- Other sections (collaboration-space, project-showcase, resource-hub, events-webinars, expert-qa, innovation-challenges) go here -->
+
+</div>
+
+<main>
+
+    <div class="container">
+
+        <section id="forums">
+
+            <h2>Category-specific Forums</h2>
+
+            <!-- Forum threads and discussions will be added dynamically -->
+
+        </section>
+
+        <button id="loadForumsBtn" onclick="loadForums()">Load Forums</button>
+
+    </div>
+
+</main>
+
+<footer>
+
+    <div class="container">
+
+        <p>&copy; 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
+
+    </div>
+
+</footer>
+
+<script>
+
+    function loadForums() {
+
+        // Fetch data from the backend API
+
+        fetch('/api/forums')
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                // Handle the data (e.g., update the page with forum information)
+
+                const forumsSection = document.getElementById('forums');
+
+                forumsSection.innerHTML = "<h2>Category-specific Forums</h2>";
+
+                data.forEach(forum => {
+
+                    forumsSection.innerHTML += `<p>${forum.category} - ${forum.title}</p>`;
+
+                });
+
+            })
+
+            .catch(error => console.error('Error fetching forums:', error));
+
+    }
+
+</script>
+
+</body>
+
+</html>
+
