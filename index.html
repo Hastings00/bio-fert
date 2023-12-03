@@ -280,11 +280,10 @@ nav ul li:hover a {
         <h2>Project Showcase</h2>
         <div>
             <Project 1>
-                <h3>DIY Organic Fertilizer</h3>
-                <h4>Urine Epsom Fertilizer</h4>
-                <p><title>Sustainable Fertilizer Production Project</title>
-</head>
-<body>
+         
+<button onclick="toggleContent()">Show Project Details</button>
+<div id="hiddenContent">
+    <title>Sustainable Fertilizer Production Project</title>
     <h1>Sustainable Fertilizer Production from Urine, Epsom Salt, and Wood Ash</h1>
 
     <h2>Objective:</h2>
@@ -325,24 +324,19 @@ nav ul li:hover a {
     <ul>
         <li>Conduct a soil test before using the fertilizer to ensure you are not over-applying nutrients.</li>
         <li>Different plants have varying nutrient requirements, so adjust the application rates accordingly.</li>
-        <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li></p>
-                <!-- Additional project details, images, and documentation links -->
-            </article>
-            <!-- Add more project showcases -->
-        </div>
-    </section>
+        <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li>
+    </ul>
+</div>
 
-    <section class="resource-hub">
-        <h2>Resource Hub</h2>
-        <div>
-            <h3>Featured Articles</h3>
-            <ul>
-                <li>Advancements in Genetic Engineering</li>
-                <li>Introduction to Quantum Computing</li>
-                <!-- Add more articles and resources -->
-            </ul>
-            <p>Explore a wealth of knowledge in various fields.</p>
-        </div>
+<script>
+    function toggleContent() {
+        var content = document.getElementById("hiddenContent");
+        content.style.display = (content.style.display === "none") ? "block" : "none";
+    }
+</script>
+
+       
+   </div>
     </section>
 
     <section class="events-webinars">
