@@ -6,8 +6,6 @@
     <title>Innoverse</title>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <script src="scripts/script.js"></script> 
-    <button onclick="toggleContent()">Show Project Details</button>
-<div id="hiddenContent">
     <style>
         .container {
             position: relative;
@@ -303,6 +301,8 @@ nav ul li:hover a {
                 color: #FF0000;                </style>
     
 </head>
+    <body><button onclick="toggleContent()">Show Project Details</button>
+<div id="hiddenContent">
     <script>
     function toggleContent() {
         var content = document.getElementById("hiddenContent");
@@ -558,5 +558,5 @@ nav ul li:hover a {
                 .catch(error => console.error('Error fetching forums:', error));
         }
     </script>
-</body>
+    </body>
 </html>
