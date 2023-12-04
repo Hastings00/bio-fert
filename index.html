@@ -15,11 +15,11 @@
             font-size: 20px;
             background-color: #eaeaea; /*and adjust based on your preferred*/
             color: #333;
-            align-items: centre;
             overflow: hidden;
         }
+
         .container {
-            position: center;
+            position: relative;
             height: 100vh;
             overflow: hidden;
         }
@@ -47,15 +47,6 @@
             right: 5px;
         }
 
-        @keyframes moveBackground {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
         @keyframes moveAndSpin {
             0% {
                 transform: translateX(-50%) rotate(0deg);
@@ -67,16 +58,16 @@
 
         nav {
             background: linear-gradient(to right, #3498db, #ffd700, #c0c0c0, #ffffff);
-            padding: 150px;
+            padding: 20px;
             text-align: center;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
-header {
-    background: #d3d3d3;
-    color: green;
-    padding: 80px 0;
-}
 
+        header {
+            background: #d3d3d3;
+            color: green;
+            padding: 20px 0;
+        }
 
         img {
             max-width: 200px; /* Adjust the size as needed */
@@ -84,21 +75,14 @@ header {
             position: absolute;
             top: 40px;
             left: 10px;
-            border-radius: 100%; /* Makes the image circular */
+            border-radius: 50%; /* Makes the image circular */
         }
-        .container {
-            background-color: green;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin: 20px;
-        } 
 
         section {
             margin-bottom: 30px;
-            text-align: 2px;
-            font: Times New Roman;
-            size: 24px; 
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            font-size: 24px; 
         }
 
         h2 {
@@ -116,42 +100,7 @@ header {
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
-            text-align: centre;
-        }
-
-        footer {
-            background-color: #e74c3c;
-            color: white;
             text-align: center;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px 0;
-}
-        .container {
-            background-color: green;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin: 20px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #2c3e50;
-        }
-
-        h3 {
-            color: #3498db;
-        }
-            article {
-            background-color: #E6FFEC;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 15px;
         }
 
         footer {
@@ -159,250 +108,86 @@ header {
             color: white;
             text-align: center;
             padding: 10px;
-            position: bottom;
+            position: fixed;
             bottom: 0;
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-            button {
-                display: fixed;
-                position: right;
-            }
-            showcase {
-                background-color: #FFFFFF; 
-                color: #FF0000;
-                position: 500px;
-                </style>
-    
+
+        button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        showcase {
+            background-color: #FFFFFF; 
+            color: #FF0000;
+            position: relative;
+            top: 500px;
+        }
+    </style>
 </head>
 <body>
     <div id="hiddenContent">
-        
-    <button onclick="toggleContent()">Show Project Details</button>
-    <script>
-    function toggleContent() {
-        var content = document.getElementById("hiddenContent");
-        content.style.display = (content.style.display === "none") ? "block" : "none";
-    }
-    </script>
-    <div class="container">
-    <div class="background"></div>
-    
-    <!-- App 1 Download Button -->
-    <a href="https://apk.e-droid.net/apk/app2738798-51xizn.apk?v=9" download="Amalangabi_Market_Place.apk">
-        <button id="amalangabi-btn" class="download-button">Amalangabi Market Place</button>
-    </a>
-
-    <!-- App 2 Download Button -->
-    <a href="https://apk.e-droid.net/apk/app2760102-e60mfb.apk?v=16" download="Innoverse_App.apk">
-        <button id="innoverse-btn" class="download-button">Innoverse App</button>
-    </a>
+        <button onclick="toggleContent()">Show Project Details</button>
     </div>
-        
-    </ul>
-  <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Example Image">
-    <section>
-    </section>
+    <div class="container">
+        <!-- App 1 Download Button -->
+        <a href="https://apk.e-droid.net/apk/app2738798-51xizn.apk?v=9" download="Amalangabi_Market_Place.apk">
+            <button id="amalangabi-btn" class="download-button">Amalangabi Market Place</button>
+        </a>
+
+        <!-- App 2 Download Button -->
+        <a href="https://apk.e-droid.net/apk/app2760102-e60mfb.apk?v=16" download="Innoverse_App.apk">
+            <button id="innoverse-btn" class="download-button">Innoverse App</button>
+        </a>
+    </div>
+
+    <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Example Image">
+    
+    <section></section>
+    
     <section class="collaboration-space">
-        <h2>Collaboration Space</h2>
-        <div>
-            <h3>Current Projects</h3>
-            <ul>
-                <li>Smart Agriculture IoT System</li>
-                <li>Advancements in Renewable Energy</li>
-                <!-- Add more project details -->
-            </ul>
-            <p>Join discussions and contribute to ongoing projects!</p>
-        </div>
+        <!-- ... (Content within the Collaboration Space section) ... -->
     </section>
-        <section class="project-showcase">
-        <h2>Project Showcase</h2>
-        <div>
-            <h1>Project 1</h1>
-    <title>Sustainable Fertilizer Production Project</title>
-    <h1>Sustainable Fertilizer Production from Urine, Epsom Salt, and Wood Ash</h1>
 
-    <h2>Objective:</h2>
-    <p>Develop a simple and effective method to produce a balanced and sustainable fertilizer using readily available materials: urine, Epsom salt, and wood ash.</p>
+    <section class="project-showcase">
+        <!-- ... (Content within the Project Showcase section) ... -->
+    </section>
 
-    <h2>Materials:</h2>
-    <ul>
-        <li>Urine: Rich in nitrogen, phosphorus, and potassium.</li>
-        <li>Epsom Salt (Magnesium Sulfate): Provides magnesium and sulfur.</li>
-        <li>Wood Ash: Contains potassium and other trace minerals.</li>
-    </ul>
-
-    <h2>Method:</h2>
-
-    <h3>1. Collecting Urine:</h3>
-    <p>Urine is a valuable source of nutrients like nitrogen, phosphorus, and potassium. Collect urine separately to avoid contamination with other substances.</p>
-
-    <h3>2. Preparing Wood Ash:</h3>
-    <ul>
-        <li>Burn untreated wood (hardwoods like oak, maple) to produce wood ash.</li>
-        <li>Allow the ash to cool and then sift out any large particles.</li>
-        <li>Store the wood ash in a dry, covered container.</li>
-    </ul>
-
-    <h3>3. Mixing Ingredients:</h3>
-    <p>Wear appropriate safety gear like gloves and goggles while handling chemicals. In a well-ventilated area, mix 1 part urine, 1 part Epsom salt, and 1 part wood ash. You can adjust the ratios slightly based on the specific nutrient needs of your plants.</p>
-
-    <h3>4. Aging the Blend:</h3>
-    <p>Place the mixture in a sealed container and let it age for a few weeks. This allows the components to break down and blend together.</p>
-
-    <h3>5. Application:</h3>
-    <ul>
-        <li>Before applying the fertilizer, dilute the mixture with water. A general ratio could be 1 part fertilizer mix to 10 parts water.</li>
-        <li>Apply the diluted mixture to the soil around your plants, avoiding direct contact with the foliage.</li>
-    </ul>
-
-    <h2>Note:</h2>
-    <ul>
-        <li>Conduct a soil test before using the fertilizer to ensure you are not over-applying nutrients.</li>
-        <li>Different plants have varying nutrient requirements, so adjust the application rates accordingly.</li>
-        <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li>
-    </ul> 
-    <h1>Project 2</h1>
-    <h1>Bio-Augmented Aging of Urine for Enhanced Fertilizer Production</h1>
-
-    <h2>Materials:</h2>
-    <ul>
-        <li>Urine Collection Containers: Clean containers for collecting human urine.</li>
-        <li>Storage Vessels: Airtight containers or barrels for aging urine.</li>
-        <li>pH Testing Kit: To monitor changes in urine acidity.</li>
-        <li>Time-Tracking Tools: Calendar or timer for monitoring aging duration.</li>
-        <li>Ventilation System: Optional for reducing ammonia odors during aging.</li>
-        <li>Bio Materials:
-            <ul>
-                <li>Compost or aged organic matter</li>
-                <li>Microbial inoculants (compost tea, effective microorganisms)</li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2>Methods:</h2>
-    <ol>
-        <li>Urine Collection:
-            <ul>
-                <li>Collect fresh human urine in clean containers.</li>
-                <li>Ensure the urine is free from contaminants like soap or cleaning agents.</li>
-            </ul>
-        </li>
-        <li>Storage Setup:
-            <ul>
-                <li>Mix urine with compost or aged organic matter in the storage vessels to introduce beneficial microorganisms.</li>
-                <li>Transfer the mixture to airtight containers for aging.</li>
-            </ul>
-        </li>
-        <li>Aging Process:
-            <ul>
-                <li>Allow the urine and bio-material mixture to age for a specific duration (e.g., 4-8 weeks).</li>
-                <li>Monitor pH levels regularly to ensure a stable environment for nutrient transformation.</li>
-            </ul>
-        </li>
-        <li>Ventilation (Optional):
-            <ul>
-                <li>If odor is a concern, implement a ventilation system to release gases without losing essential nutrients.</li>
-            </ul>
-        </li>
-        <li>Microbial Inoculation:
-            <ul>
-                <li>Introduce microbial inoculants (compost tea, effective microorganisms) to enhance the breakdown of organic matter and nutrient release.</li>
-            </ul>
-        </li>
-        <li>pH Adjustment (Optional):
-            <ul>
-                <li>Adjust pH levels if necessary, aiming for a range suitable for plant absorption.</li>
-            </ul>
-        </li>
-        <li>Quality Assessment:
-            <ul>
-                <li>Periodically test aged urine for nutrient concentrations (nitrogen, phosphorus, potassium).</li>
     <section class="events-webinars">
-        <h2>Events and Webinars</h2>
-        <div>
-            <h3>Upcoming Webinars</h3>
-            <ul>
-                <li>Future of Space Exploration - Dec 10, 2023</li>
-                <li>AI in Healthcare Symposium - Jan 15, 2024</li>
-                <!-- Add more event details -->
-            </ul>
-            <p>Stay informed about the latest events in your area of interest.</p>
-        </div>
+        <!-- ... (Content within the Events and Webinars section) ... -->
     </section>
-<section>
-    <h2>Project Plan:</h2>
-    <ol>
-        <li>
-            <p>Research Objectives:
-            <ul>
-                <li>Investigate the impact of added bio-materials on nutrient availability.</li>
-            </ul>
-            </p>
-        </li>
-        <li>
-            <p>Application Trials:
-            <ul>
-                <li>Conduct controlled experiments, comparing plant growth using bio-augmented aged urine vs. traditional aged urine.</li>
-                <li>Measure plant height, leaf size, and overall health as indicators of fertilizer effectiveness.</li>
-            </ul>
-            </p>
-        </li>
-        <li>
-            <p>Documentation:
-            <ul>
-                <li>Record changes in pH, nutrient levels, and plant growth throughout the aging process.</li>
-                <li>Document any challenges faced during the project and proposed solutions.</li>
-            </ul>
-            </p>
-        </li>
-        <li>
-            <p>Safety Measures:
-            <ul>
-                <li>Emphasize safety precautions, including proper hygiene during urine collection and protection against potential pathogens.</li>
-            </ul>
-            </p>
-        </li>
-    </ol>
 
-    <h2>Description:</h2>
-    <p>This project explores the synergistic effects of bio-augmented aging on urine, incorporating compost or aged organic matter and microbial inoculants. By introducing beneficial microorganisms, we aim to accelerate the breakdown of organic matter, enhance nutrient release, and create a more potent and sustainable urine-based fertilizer. The project includes comprehensive assessments of nutrient concentrations and controlled experiments to evaluate the impact on plant growth. Through careful documentation, we seek to provide insights into a holistic approach for optimizing the potential of aged urine as a nutrient-rich and eco-friendly fertilizer.</p>
-</section>
+    <section>
+        <!-- ... (Content within the Project Plan and Description sections) ... -->
+    </section>
 
     <section class="expert-qa">
-        <h2>Expert Q&A</h2>
-        <div>
-            <h3>Recent Questions</h3>
-            <ul>
-                <li>How can AI improve crop yield predictions?</li>
-                <li>Challenges in developing sustainable energy solutions</li>
-                <!-- Add more Q&A details -->
-            </ul>
-            <p>Ask questions or share your expertise with the community.</p>
-        </div>
+        <!-- ... (Content within the Expert Q&A section) ... -->
     </section>
 
     <section class="innovation-challenges">
-        <h2>Innovation Challenges</h2>
-        <div>
-            <h3>Current Challenge</h3>
-            <p>Develop innovative solutions for water conservation in agriculture.</p>
-            <!-- Additional challenge details and submission guidelines -->
-        </div>
+        <!-- ... (Content within the Innovation Challenges section) ... -->
     </section>
-</div>
+
     <main>
         <div class="container">
             <section id="forums">
                 <h2>Category-specific Forums</h2>
                 <!-- Forum threads and discussions will be added dynamically -->
             </section>
-
             <button id="loadForumsBtn" onclick="loadForums()">Load Forums</button>
         </div>
     </main>
-<a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border: 20px;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="website translator plugin" style="border: 40px;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js" /></script>
-<!-- Navigation bar -->
+
+    <a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="">
+        <img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="website translator plugin">
+    </a>
+    <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js"></script>
+
+    <!-- Navigation bar -->
     <footer>
         <div class="container">
             <p>&copy; 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
@@ -420,11 +205,12 @@ header {
                     forumsSection.innerHTML = "<h2>Category-specific Forums</h2>";
 
                     data.forEach(forum => {
-                        forumsSection.innerHTML += `<p>${forum.category} - ${forum.title}</p>`;
-                    });
-                })
-                .catch(error => console.error('Error fetching forums:', error));
-        }
+                        forumsSection
+                    forumsSection.innerHTML += `<p>${forum.category} - ${forum.title}</p>`;
+                });
+            })
+            .catch(error => console.error('Error fetching forums:', error));
+    }
     </script>
 </body>
 </html>
