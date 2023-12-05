@@ -28,11 +28,47 @@
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+        .download-button {
+            width: 120px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            position: absolute;
+            animation: moveAndSpin 6s infinite linear;
+        }
 
-    p {
-      color: #555;
-    }
+        #amalangabi-btn {
+            background-color: #001f3f; /* Deep Blue */
+            color: #ffffff; /* White text */
+            left: 0;
+        }
 
+        #innoverse-btn {
+            background-color: #ff0000; /* Red */
+            color: #ffffff; /* White text */
+            right: 0;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes moveAndSpin {
+            0% {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            100% {
+                transform: translateX(50%) rotate(360deg);
+            }
+        }
+    
     .app-button {
       display: inline-block;
       padding: 15px 30px;
