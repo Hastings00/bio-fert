@@ -1,170 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innoverse</title>
   <style>
     body {
       font-family: 'Times New Roman';
       font-size: 20px;
-      background: #FFFFFF;
-      margin: 2px;
-      padding: 2px;
-      height: 100vh;
-header {
-  background-color: #333;
-  color: #FF0000;
-  padding: 15px;
-  text-align: center;
-}
-
-tabs {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #333;
-  display: flex;
-  flex-direction: normal;
-  position: hang;
-  top: 20px;
-  right: 20px;
-}
-
-.tab {
-  padding: 10px;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.tab:hover {
-  background-color: #555;
-}
-
-.tab-content {
-  display: none;
-  padding: 50px;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-.container {
-  max-width: 200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.app-button {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #4CAF50;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 120px;
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  position: absolute;
-  animation: moveAndSpin 6s infinite linear;
-}
-
-.button {
-  background-color: #FF0000; /* Red color */
-  color: #FFFFFF; /* White text */
-  padding: 10px 20px; /* Padding for better appearance */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor style on hover */
-}
-
-    #amalangabi-btn {
-        /* ... Amalangabi button styles ... */
-        animation: moveAndSpin 6s infinite linear;
+      background: #FF0000; /* Changed background color to red */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    #innoverse-btn {
-        /* ... Innoverse button styles ... */
-        animation: moveAndSpin 6s infinite linear;
-    }
-
-    @keyframes moveAndSpin {
-        0% {
-            transform: translateX(-50%) rotate(0deg);
-        }
-        100% {
-            transform: translateX(50%) rotate(360deg);
-        }
-      
-    img {
-      max-width: 60%;
-      height: auto;
-      margin-top: 20px;
-    }
-
-    footer {
+    header {
       background-color: #333;
+      color: #FF0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #555;
       color: #fff;
       padding: 10px;
       text-align: center;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; /* Added flex-wrap to allow tabs to wrap to the next line */
     }
-      
-      .hidden {
-  display: none;
-        }   
+
+    nav a {
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #777;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: #fff;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Added styles for responsive menu */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu-icon {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav.show {
+        display: flex;
+      }
+    }
   </style>
 </head>
-  
+
 <body>
-  <a id="amalangabi-btn" href="https://apk.e-droid.net/apk/app2738798-51xizn.apk?v=9">Amalangabi Market Place</a>
-  <a id="innoverse-btn" href="https://apk.e-droid.net/apk/app2760102-e60mfb.apk?v=16">Innoverse App</a>
-  <a href="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ">
-    <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Innoverse Logo">
-  </a>
-  <ul class="tabs">
-        <li class="tab" onclick="showTab('tab1')">Tab 1</li>
-        <li class="tab" onclick="showTab('tab2')">Tab 2</li>
-        <li class="tab" onclick="showTab('tab3')">Tab 3</li>
+  <header>
+    <h1 style="margin: 0;">Innoverse</h1>
+  </header>
+
+  <!-- Added menu icon for small screens -->
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <nav>
+    <a onclick="showTab('home')">Home</a>
+    <a onclick="showTab('project1')">Project 1</a>
+    <a onclick="showTab('organicBlend')">Organic Blend + Fertilizer</a>
+    <a onclick="showTab('help')">Help</a>
+    <a onclick="showTab('contact')">Contact</a>
+    <!-- Add more tabs as needed -->
+  </nav>
+
+  <div id="home" class="tab-content active">
+    <a id="amalangabi-btn" href="https://apk.e-droid.net/apk/app2738798-51xizn.apk?v=9">Amalangabi Market Place</a>
+    <a id="innoverse-btn" href="https://apk.e-droid.net/apk/app2760102-e60mfb.apk?v=16">Innoverse App</a>
+    <a href="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ">
+      <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Innoverse Logo">
+    </a>
+
+    <ul class="tabs">
+      <li class="tab" onclick="showTab('tab1')">Tab 1</li>
+      <li class="tab" onclick="showTab('tab2')">Tab 2</li>
+      <li class="tab" onclick="showTab('tab3')">Tab 3</li>
     </ul>
 
     <div id="tab1" class="tab-content active">
-        <!-- Content for Tab 1 -->
-        <h2>Tab 1 Content</h2>
-        <p>This is the content for Tab 1.</p>
+      <!-- Content for Tab 1 -->
+      <h2>Tab 1 Content</h2>
+      <p>This is the content for Tab 1.</p>
     </div>
 
     <div id="tab2" class="tab-content">
-        <!-- Content for Tab 2 -->
-        <h2>Tab 2 Content</h2>
-        <p>This is the content for Tab 2.</p>
+      <!-- Content for Tab 2 -->
+      <h2>Tab 2 Content</h2>
+      <p>This is the content for Tab 2.</p>
     </div>
 
     <div id="tab3" class="tab-content">
-        <!-- Content for Tab 3 -->
-        <h2>Tab 3 Content</h2>
-        <p>This is the content for Tab 3.</p>
+      <!-- Content for Tab 3 -->
+      <h2>Tab 3 Content</h2>
+      <p>This is the content for Tab 3.</p>
     </div>
-  
-  <h2>Collaboration Space</h2>
-  <h3>Current Projects</h3>
-  <ul>
-    <li>Smart Agriculture IoT System</li>
-    <li>Advancements in Renewable Energy</li>
-  </ul>
-  <p>Join discussions and contribute to ongoing projects!</p>
-  <h2>Project Showcase</h2>
-  <h1>Project 1</h1>
+  </div>
+
+  <div id="project1" class="tab-content">
+    <h2>Project 1</h2>
+    <h1>Sustainable Fertilizer Production</h1>
+    < <h1>Project 1</h1>
   <h1>Sustainable Fertilizer Production from Urine, Epsom Salt, and Wood Ash</h1>
   <h2>Objective:</h2>
   <p>Develop a simple and effective method to produce a balanced and sustainable fertilizer using readily available materials: urine, Epsom salt, and wood ash.</p>
@@ -198,113 +168,13 @@ tabs {
     <li>Different plants have varying nutrient requirements, so adjust the application rates accordingly.</li>
     <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li>
   </ul>
-  <h1>Project 2</h1>
-  <h1>Bio-Augmented Aging of Urine for Enhanced Fertilizer Production</h1>
-  <h2>Materials:</h2>
-  <ul>
-    <li>Urine Collection Containers: Clean containers for collecting human urine.</li>
-    <li>Storage Vessels: Airtight containers or barrels for aging urine.</li>
-    <li>pH Testing Kit: To monitor changes in urine acidity.</li>
-    <li>Time-Tracking Tools: Calendar or timer for monitoring aging duration.</li>
-    <li>Ventilation System: Optional for reducing ammonia odors during aging.</li>
-    <li>Bio Materials:
-      <ul>
-        <li>Compost or aged organic matter</li>
-        <li>Microbial inoculants (compost tea, effective microorganisms)</li>
-      </ul>
-    </li>
-  </ul>
-  <h2>Methods:</h2>
-  <ol>
-    <li>Urine Collection:
-      <ul>
-        <li>Collect fresh human urine in clean containers.</li>
-        <li>Ensure the urine is free from contaminants like soap or cleaning agents.</li>
-      </ul>
-    </li>
-    <li>Storage Setup:
-      <ul>
-        <li>Mix urine with compost or aged organic matter in the storage vessels to introduce beneficial microorganisms.</li>
-        <li>Transfer the mixture to airtight containers for aging.</li>
-      </ul>
-    </li>
-    <li>Aging Process:
-      <ul>
-        <li>Allow the urine and bio-material mixture to age for a specific duration (e.g., 4-8 weeks).</li>
-        <li>Monitor pH levels regularly to ensure a stable environment for nutrient transformation.</li>
-      </ul>
-    </li>
-    <li>Ventilation (Optional):
-      <ul>
-        <li>If odor is a concern, implement a ventilation system to release gases without losing essential nutrients.</li>
-      </ul>
-    </li>
-    <li>Microbial Inoculation:
-      <ul>
-        <li>Introduce microbial inoculants (compost tea, effective microorganisms) to enhance the breakdown of organic matter and nutrient release.</li>
-      </ul>
-    </li>
-    <li>pH Adjustment (Optional):
-      <ul>
-        <li>Adjust pH levels if necessary, aiming for a range suitable for plant absorption.</li>
-      </ul>
-    </li>
-    <li>Quality Assessment:
-      <ul>
-        <li>Periodically test aged urine for nutrient concentrations (nitrogen, phosphorus, potassium).</li> 
-        <ul>
-          <li>Future of Space Exploration - Dec 10, 2023</li>
-          <li>AI in Healthcare Symposium - Jan 15, 2024</li>
-        </ul>
-        <p>Stay informed about the latest events in your area of interest.</p>
-        <h2>Project Plan:</h2>
-        <ol>
-          <li>
-            <p>Research Objectives:</p>
-            <ul>
-              <li>Investigate the impact of added bio-materials on nutrient availability.</li>
-            </ul>
-          </li>
-          <li>
-            <p>Application Trials:</p>
-            <ul>
-              <li>Conduct controlled experiments, comparing plant growth using bio-augmented aged urine vs. traditional aged urine.</li>
-              <li>Measure plant height, leaf size, and overall health as indicators of fertilizer effectiveness.</li>
-            </ul>
-          </li>
-          <li>
-            <p>Documentation:</p>
-            <ul>
-              <li>Record changes in pH, nutrient levels, and plant growth throughout the aging process.</li>
-              <li>Document any challenges faced during the project and proposed solutions.</li>
-            </ul>
-          </li>
-          <li>
-            <p>Safety Measures:</p>
-            <ul>
-              <li>Emphasize safety precautions, including proper hygiene during urine collection and protection against potential pathogens.</li>
-            </ul>
-          </li>
-        </ol>
-        <h2>Description:</h2>
-        <p>This project explores the synergistic effects of bio-augmented aging on urine, incorporating compost or aged organic matter and microbial inoculants. By introducing beneficial microorganisms, we aim to accelerate the breakdown of organic matter, enhance nutrient release, and create a more potent and sustainable urine-based fertilizer. The project includes comprehensive assessments of nutrient concentrations and controlled experiments to evaluate the impact on plant growth. Through careful documentation, we seek to provide insights into a holistic approach for optimizing the potential of aged urine as a nutrient-rich and eco-friendly fertilizer.</p>
-        <h2>Expert Q&amp;A</h2>
-        <h3>Recent Questions</h3>
-        <ul>
-          <li>How can AI improve crop yield predictions?</li>
-          <li>Challenges in developing sustainable energy solutions</li>
-        </ul>
-        <p>Ask questions or share your expertise with the community.</p>
-        <h2>Innovation Challenges</h2>
-        <h3>Current Challenge</h3>
-        <p>Develop innovative solutions for water conservation in agriculture.</p>
-      </ul>
-    </li>
-  </ol>
-  <button onclick="toggleContent()">Organic Blend Plus Fertilizer</button>
+  </div>
 
-<div id="fertilizerContent" class="hidden">
-  <h2>Fertilizer Components:</h2>
+  <div id="organicBlend" class="tab-content">
+    <h2>Organic Blend + Fertilizer</h2>
+    <button onclick="toggleContent()">Show Fertilizer Components</button>
+    <div id="fertilizerContent" class="hidden">
+      <h2>Fertilizer Components:</h2>
   <ul>
     <li>One bag of urea (20kg)</li>
     <li>One bag of DAP (20kg)</li>
@@ -378,45 +248,98 @@ tabs {
   <ul>
     <li>When plucking, pick from the base and avoid breaking the branches.</li>
     <li>Ensure the harvested fruits are mature and firm.</li>
+  </ul><h1>Bio-Augmented Aging of Urine for Enhanced Fertilizer Production</h1>
+  <h2>Materials:</h2>
+  <ul>
+    <li>Urine Collection Containers: Clean containers for collecting human urine.</li>
+    <li>Storage Vessels: Airtight containers or barrels for aging urine.</li>
+    <li>pH Testing Kit: To monitor changes in urine acidity.</li>
+    <li>Time-Tracking Tools: Calendar or timer for monitoring aging duration.</li>
+    <li>Ventilation System: Optional for reducing ammonia odors during aging.</li>
+    <li>Bio Materials:
+      <ul>
+        <li>Compost or aged organic matter</li>
+        <li>Microbial inoculants (compost tea, effective microorganisms)</li>
+      </ul>
+    </li>
   </ul>
-</div>
-<script>
-  function toggleContent() {
-    var content = document.getElementById('fertilizerContent');
-    content.classList.toggle('hidden');
-  }
-</script>
-  <h2> All languages Translator</h2>Translate the contents here <a href="http://free-website-translation.com/"><img src="http://free-website-translation.com/img/fwt_button_en.gif" alt="website translator plugin"></a>
-  <p>© 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
+  <h2>Methods:</h2>
+  <ol>
+    <li>Urine Collection:
+      <ul>
+        <li>Collect fresh human urine in clean containers.</li>
+        <li>Ensure the urine is free from contaminants like soap or cleaning agents.</li>
+      </ul>
+    </li>
+    <li>Storage Setup:
+      <ul>
+        <li>Mix urine with compost or aged organic matter in the storage vessels to introduce beneficial microorganisms.</li>
+        <li>Transfer the mixture to airtight containers for aging.</li>
+      </ul>
+    </li>
+    <li>Aging Process:
+      <ul>
+        <li>Allow the urine and bio-material mixture to age for a specific duration (e.g., 4-8 weeks).</li>
+        <li>Monitor pH levels regularly to ensure a stable environment for nutrient transformation.</li>
+      </ul>
+    </li>
+    <li>Ventilation (Optional):
+      <ul>
+        <li>If odor is a concern, implement a ventilation system to release gases without losing essential nutrients.</li>
+      </ul>
+    </li>
+    <li>Microbial Inoculation:
+      <ul>
+        <li>Introduce microbial inoculants (compost tea, effective microorganisms) to enhance the breakdown of organic matter and nutrient release.</li>
+      </ul>
+    </li>
+    <li>pH Adjustment (Optional):
+      <ul>
+        <li>Adjust pH levels if necessary, aiming for a range suitable for plant absorption.</li>
+      </ul>
+    </li>
+    <li>Quality Assessment:
+      <ul>
+        <li>Periodically test aged urine for nutrient concentrations (nitrogen, phosphorus, potassium).</li> 
+        <ul>
+            
+</st of Organic Blend Plus Fertilizer content ... -->
+    </div>
+  </div>
+
+  <div id="help" class="tab-content">
+    <h2>Help</h2>
+    <p>If you need assistance, reach out to our support team.</p>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <h2>Contact</h2>
+    <p>Get in touch with us through the following contact details.</p>
+    <!-- Include contact information here -->
+  </div>
+
+  <!-- Your remaining content -->
+
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Replace 'your_default_language_code' with the code for Chichewa, e.g., 'ny' (Chichewa ISO code).
-    const defaultLanguage = 'your_default_language_code';
+    function showTab(tabId) {
+      var tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(function (tab) {
+        tab.classList.remove('active');
+      });
 
-    // Function to load the translator and set the default language.
-    function loadTranslator() {
-      const translatorScript = document.createElement('script');
-      translatorScript.src = 'http://free-website-translation.com/scripts/fwt.js';
-      translatorScript.type = 'text/javascript';
-      translatorScript.setAttribute('data-language', defaultLanguage);
-
-      // Append the translator script to the document head.
-      document.head.appendChild(translatorScript);
+      document.getElementById(tabId).classList.add('active');
     }
 
-    // Call the loadTranslator function when the DOM is fully loaded.
-    loadTranslator();
-  });
-  </script>
-    <script>
-    function showTab(tabId) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function (tab) {
-                tab.classList.remove('active');
-            });
+    function toggleContent() {
+      var content = document.getElementById('fertilizerContent');
+      content.classList.toggle('hidden');
+    }
 
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
+    function toggleMenu() {
+      var navigation = document.querySelector('nav');
+      navigation.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
+    
