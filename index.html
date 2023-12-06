@@ -11,11 +11,8 @@
       padding: 2px;
       height: 100vh;
       position: relative;
-      overflow: hidden;
-      animation: changeBackground 1s infinite;
-   
-        
-}
+    }
+    
     header {
       background-color: #333;
       color: #FF0000;
@@ -241,23 +238,6 @@
   </ol>
   <h2> All languages Translator</h2>Translate the contents here <a href="http://free-website-translation.com/"><img src="http://free-website-translation.com/img/fwt_button_en.gif" alt="website translator plugin"></a>
   <p>© 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
-  
-    <script>
-        // JavaScript to load the background images
-        document.addEventListener("DOMContentLoaded", function () {
-            var body = document.querySelector("body");
-            var backgrounds = [
-                'https://drive.google.com/uc?id=14R-ydocC3FcEsYVLmiU3dIBXUlARWr4O'
-            ];
-            var currentIndex = 0;
-
-            function changeBackground() {
-                currentIndex = (currentIndex + 1) % backgrounds.length;
-                body.style.backgroundImage = 'url(' + backgrounds[currentIndex] + ')';
-            }
-
-            setInterval(changeBackground, 10000); // Change background every 10 seconds
-        });
-    </script>
+    
 </body>
     </html>
