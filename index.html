@@ -19,10 +19,19 @@
       padding: 15px;
       text-align: center;
     }
-    
+    tabs {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
 
         .tab {
-            flex: 1;
             padding: 10px;
             text-align: center;
             color: #fff;
@@ -42,7 +51,7 @@
         .tab-content.active {
             display: block;
         }
-
+    
      .container {
       max-width: 800px;
       margin: 20px auto;
@@ -112,6 +121,40 @@
   <a href="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ">
     <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Innoverse Logo">
   </a>
+  <ul class="tabs">
+        <li class="tab" onclick="showTab('tab1')">Tab 1</li>
+        <li class="tab" onclick="showTab('tab2')">Tab 2</li>
+        <li class="tab" onclick="showTab('tab3')">Tab 3</li>
+    </ul>
+
+    <div id="tab1" class="tab-content active">
+        <!-- Content for Tab 1 -->
+        <h2>Tab 1 Content</h2>
+        <p>This is the content for Tab 1.</p>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <!-- Content for Tab 2 -->
+        <h2>Tab 2 Content</h2>
+        <p>This is the content for Tab 2.</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <!-- Content for Tab 3 -->
+        <h2>Tab 3 Content</h2>
+        <p>This is the content for Tab 3.</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
       <h2>Collaboration Space</h2>
   <h3>Current Projects</h3>
   <ul>
@@ -261,42 +304,5 @@
   </ol>
   <h2> All languages Translator</h2>Translate the contents here <a href="http://free-website-translation.com/"><img src="http://free-website-translation.com/img/fwt_button_en.gif" alt="website translator plugin"></a>
   <p>© 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
-  
-    <ul class="tabs">
-        <li class="tab" onclick="showTab('tab1')">Tab 1</li>
-        <li class="tab" onclick="showTab('tab2')">Tab 2</li>
-        <li class="tab" onclick="showTab('tab3')">Tab 3</li>
-    </ul>
-
-    <div id="tab1" class="tab-content active">
-        <!-- Content for Tab 1 -->
-        <h2>Tab 1 Content</h2>
-        <p>This is the content for Tab 1.</p>
-    </div>
-
-    <div id="tab2" class="tab-content">
-        <!-- Content for Tab 2 -->
-        <h2>Tab 2 Content</h2>
-        <p>This is the content for Tab 2.</p>
-    </div>
-
-    <div id="tab3" class="tab-content">
-        <!-- Content for Tab 3 -->
-        <h2>Tab 3 Content</h2>
-        <p>This is the content for Tab 3.</p>
-    </div>
-
-    <script>
-        function showTab(tabId) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function (tab) {
-                tab.classList.remove('active');
-            });
-
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
-
- 
 </body>
-    </html>
+</html>
