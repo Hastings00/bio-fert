@@ -76,6 +76,14 @@
       position: absolute;
       animation: moveAndSpin 6s infinite linear;
     }
+    button {
+      background-color: #FF0000; /* Red color */
+      color: #FFFFFF; /* White text */
+      padding: 10px 20px; /* Padding for better appearance */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Cursor style on hover */
+    }
 
     #amalangabi-btn {
         /* ... Amalangabi button styles ... */
@@ -110,6 +118,9 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      .hidden {
+      display: none;
+      }
     }
   </style>
 </head>
@@ -298,6 +309,92 @@
       </ul>
     </li>
   </ol>
+  <button onclick="toggleContent()">Organic Blend Plus Fertilizer</button>
+
+<div id="fertilizerContent" class="hidden">
+  <h2>Fertilizer Components:</h2>
+  <ul>
+    <li>One bag of urea (20kg)</li>
+    <li>One bag of DAP (20kg)</li>
+    <li>Phosphate fertilizer bag (10kg)</li>
+    <li>10 kg of first and second round fertilizer (basal and top dressing)</li>
+    <li>5 liters of water</li>
+    <li>Plastic sheet or tarp for ground cover</li>
+    <li>Shovel</li>
+    <li>Hoe</li>
+    <li>Large sack or tarp for mixing the components</li>
+  </ul>
+
+  <h2>Fertilizer Components Usage:</h2>
+  <ul>
+    <li><strong>Urea (Bran)</strong>: Add essential nutrients like phosphorus and carbohydrates to improve crop growth.</li>
+    <li><strong>DAP (Dung)</strong>:
+      <ul>
+        <li>Supply necessary nutrients, especially nitrogen for poultry manure.</li>
+        <li>Use organic materials to support overall fertilizer effectiveness.</li>
+      </ul>
+    </li>
+    <li><strong>Phosphate Fertilizer (wood ash)</strong>:
+      <ul>
+        <li>Add essential nutrients.</li>
+        <li>Use safe materials to prevent fertilizer burn.</li>
+        <li>Increase nutrient absorption in our soil.</li>
+      </ul>
+    </li>
+    <li><strong>Fertilizer</strong>: Apply necessary nutrients such as nitrogen. Assist in enhancing overall fertilizer effectiveness and accelerating crop growth.</li>
+    <li><strong>Water</strong>: Provide moisture to facilitate the activation of applied fertilizers.</li>
+  </ul>
+
+  <h2>Application Guidelines:</h2>
+  <ul>
+    <li>Spread a plastic sheet on the ground and place the sack on it.</li>
+    <li>If applying to plants, place the plastic sheet underneath and fold it when done.</li>
+  </ul>
+
+  <h2>Application Process:</h2>
+  <ul>
+    <li>Choose suitable poultry or cattle manure, ensuring it's well-composted.</li>
+    <li>Spread one bag of urea on the prepared sheet.</li>
+    <li>Add one bag of DAP and mix thoroughly.</li>
+    <li>Incorporate the phosphate fertilizer and mix well.</li>
+    <li>Include 10 kg of the chosen basal or top dressing fertilizer.</li>
+    <li>Pour 5 liters of water, distributing it evenly.</li>
+    <li>Once the mixture is complete, fold the sheet over and mix thoroughly.</li>
+    <li>Apply the fertilizer to the field, and within 21 days, positive results should be visible.</li>
+  </ul>
+
+  <h2>Crop Planting:</h2>
+  <ul>
+    <li>For maize, plant seeds at a depth of 10 cm, spacing them 10 cm apart.</li>
+    <li>Water the field immediately after planting.</li>
+  </ul>
+
+  <h2>Harvesting:</h2>
+  <ul>
+    <li>These guidelines, along with proper hand cultivation and maintaining 260 plant stands per two square meters, ensure a bountiful harvest.</li>
+  </ul>
+
+  <h2>Local Recommendations for DIY Fertiliser</h2>
+  <ul>
+    <li>First stage: Apply fertilizer carefully.</li>
+    <li>Second stage: All fertilizers should be in one place.</li>
+    <li>Third stage: Mix the specified components.</li>
+    <li>Fourth stage: Apply the final touch.</li>
+  </ul>
+
+  <h2>Harvesting Tips:</h2>
+  <ul>
+    <li>When plucking, pick from the base and avoid breaking the branches.</li>
+    <li>Ensure the harvested fruits are mature and firm.</li>
+  </ul>
+</div>
+
+<script>
+  function toggleContent() {
+    var content = document.getElementById('fertilizerContent');
+    content.classList.toggle('hidden');
+  }
+</script>
   <h2> All languages Translator</h2>Translate the contents here <a href="http://free-website-translation.com/"><img src="http://free-website-translation.com/img/fwt_button_en.gif" alt="website translator plugin"></a>
   <p>© 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
   <script>
