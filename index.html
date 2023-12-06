@@ -154,17 +154,7 @@
         <p>This is the content for Tab 3.</p>
     </div>
   
-    <script>
-        function showTab(tabId) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function (tab) {
-                tab.classList.remove('active');
-            });
-
-            document.getElementById(tabId).classList.add('active');
-        }
-    </script>
-      <h2>Collaboration Space</h2>
+  <h2>Collaboration Space</h2>
   <h3>Current Projects</h3>
   <ul>
     <li>Smart Agriculture IoT System</li>
@@ -388,7 +378,6 @@
     <li>Ensure the harvested fruits are mature and firm.</li>
   </ul>
 </div>
-
 <script>
   function toggleContent() {
     var content = document.getElementById('fertilizerContent');
@@ -416,7 +405,16 @@
     // Call the loadTranslator function when the DOM is fully loaded.
     loadTranslator();
   });
-</script>
+  </script>
+    <script>
+    function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function (tab) {
+                tab.classList.remove('active');
+            });
 
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
