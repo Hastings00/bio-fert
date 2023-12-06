@@ -303,5 +303,26 @@
   </ol>
   <h2> All languages Translator</h2>Translate the contents here <a href="http://free-website-translation.com/"><img src="http://free-website-translation.com/img/fwt_button_en.gif" alt="website translator plugin"></a>
   <p>© 2023 Innoverse. All rights reserved. Designed by Hastings Eneya Phiri at Hephtech.</p>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Replace 'your_default_language_code' with the code for Chichewa, e.g., 'ny' (Chichewa ISO code).
+    const defaultLanguage = 'your_default_language_code';
+
+    // Function to load the translator and set the default language.
+    function loadTranslator() {
+      const translatorScript = document.createElement('script');
+      translatorScript.src = 'http://free-website-translation.com/scripts/fwt.js';
+      translatorScript.type = 'text/javascript';
+      translatorScript.setAttribute('data-language', defaultLanguage);
+
+      // Append the translator script to the document head.
+      document.head.appendChild(translatorScript);
+    }
+
+    // Call the loadTranslator function when the DOM is fully loaded.
+    loadTranslator();
+  });
+</script>
+
 </body>
 </html>
