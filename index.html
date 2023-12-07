@@ -1,4 +1,4 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -78,19 +78,7 @@
       nav.show {
         display: flex;
       }
-
-    img {
-      position: top;
-      display: left;
-      width: 100px;
-      height: 100px;
-      padding: 2px;
-      }
-      
-    footer {
-      position: bottom;
-      text-decoration: red;
-    }    
+    }
   </style>
 </head>
 
@@ -104,73 +92,53 @@
 
   <nav>
     <a onclick="showTab('home')">Home</a>
-    <a onclick="showTab('Urine-Epsom Fertilizer')">Urine-Epsom Fertilizer</a>
-    <a onclick="showTab('organicBlend')">Organic Blend plus</a>
+    <a onclick="showTab('project1')">Project 1</a>
+    <a onclick="showTab('organicBlend')">Organic Blend + Fertilizer</a>
     <a onclick="showTab('help')">Help</a>
     <a onclick="showTab('contact')">Contact</a>
-    <a onclick="showTab('Developer')">Developer</a>
+    <!-- Add more tabs as needed -->
   </nav>
 
   <div id="home" class="tab-content active">
+    <a id="amalangabi-btn" href="https://apk.e-droid.net/apk/app2738798-51xizn.apk?v=9">Amalangabi Market Place</a>
+    <a id="innoverse-btn" href="https://apk.e-droid.net/apk/app2760102-e60mfb.apk?v=16">Innoverse App</a>
     <a href="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ">
       <img src="https://drive.google.com/uc?id=12KaxQnUZWdOr7rXEm2phlHhZBPIl4jdZ" alt="Innoverse Logo">
+    </a>
+
     <ul class="tabs">
-      <li class="tab" onclick="showTab('Goal orientation')">Goal Orientation</li>
-      <li class="tab" onclick="showTab('Advancements')">Advancements</li>
-      <li class="tab" onclick="showTab('Activation of  minds')">Activation of minds</li>
+      <li class="tab" onclick="showTab('tab1')">Tab 1</li>
+      <li class="tab" onclick="showTab('tab2')">Tab 2</li>
+      <li class="tab" onclick="showTab('tab3')">Tab 3</li>
     </ul>
+
     <div id="tab1" class="tab-content active">
-      <h1>knowledge</h1>
-      <p>Share the knowledge,build one reproductive community,transform our lives through careful support to remote areas to improve their quality life through bumper yields  in their garden with the use of DIY fertilizer </p>
-      <h2>Goal orientation</h2>
-      <p>To change the future of agriculture in Malawi 🇲🇼</p>
-    </div>
-    <div id="tab2" class="tab-content">
-      <h1>Advancements</h1>
-      <h2>Back to Eden initiatives</h2>
-      <p>Reflect back ,how people survived by using bio-augmented fertilizer and look best ways to improve our soil.</p>
+      <!-- Content for Tab 1 -->
+      <h2>Tab 1 Content</h2>
+      <p>This is the content for Tab 1.</p>
     </div>
 
-  <div id="Urine-Epsom Fertilizer" class="tab-content">
-    <h2>Urine-Epsom Fertilizer</h2>
-    <h1>Sustainable Fertilizer Production</h1>
-    < <h1>Urine-based Fertilizer</h1>
-  <h1>Sustainable Fertilizer Production from Urine, Epsom Salt, and Wood Ash</h1>
-  <h2>Objective:</h2>
-  <p>Develop a simple and effective method to produce a balanced and sustainable fertilizer using readily available materials: urine, Epsom salt, and wood ash.</p>
-  <h2>Materials:</h2>
-  <ul>
-    <li>Urine: Rich in nitrogen, phosphorus, and potassium.</li>
-    <li>Epsom Salt (Magnesium Sulfate): Provides magnesium and sulfur.</li>
-    <li>Wood Ash: Contains potassium and other trace minerals.</li>
-  </ul>
-  <h2>Method:</h2>
-  <h3>1. Collecting Urine:</h3>
-  <p>Urine is a valuable source of nutrients like nitrogen, phosphorus, and potassium. Collect urine separately to avoid contamination with other substances.</p>
-  <h3>2. Preparing Wood Ash:</h3>
-  <ul>
-    <li>Burn untreated wood (hardwoods like oak, maple) to produce wood ash.</li>
-    <li>Allow the ash to cool and then sift out any large particles.</li>
-    <li>Store the wood ash in a dry, covered container.</li>
-  </ul>
-  <h3>3. Mixing Ingredients:</h3>
-  <p>Wear appropriate safety gear like gloves and goggles while handling chemicals. In a well-ventilated area, mix 1 part urine, 1 part Epsom salt, and 1 part wood ash. You can adjust the ratios slightly based on the specific nutrient needs of your plants.</p>
-  <h3>4. Aging the Blend:</h3>
-  <p>Place the mixture in a sealed container and let it age for a few weeks. This allows the components to break down and blend together.</p>
-  <h3>5. Application:</h3>
-  <ul>
-    <li>Before applying the fertilizer, dilute the mixture with water. A general ratio could be 1 part fertilizer mix to 10 parts water.</li>
-    <li>Apply the diluted mixture to the soil around your plants, avoiding direct contact with the foliage.</li>
-  </ul>
-  <h2>Note:</h2>
-  <ul>
-    <li>Conduct a soil test before using the fertilizer to ensure you are not over-applying nutrients.</li>
-    <li>Different plants have varying nutrient requirements, so adjust the application rates accordingly.</li>
-    <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li>
-  </ul>
+    <div id="tab2" class="tab-content">
+      <!-- Content for Tab 2 -->
+      <h2>Tab 2 Content</h2>
+      <p>This is the content for Tab 2.</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <!-- Content for Tab 3 -->
+      <h2>Tab 3 Content</h2>
+      <p>This is the content for Tab 3.</p>
+    </div>
   </div>
-  <div id="Tab 3" class="tab-content">
-    <h2>Organic Blend plus Fertilizer</h2>
+
+  <div id="project1" class="tab-content">
+    <h2>Project 1</h2>
+    <h1>Sustainable Fertilizer Production</h1>
+    <!-- ... Rest of Project 1 content ... -->
+  </div>
+
+  <div id="organicBlend" class="tab-content">
+    <h2>Organic Blend + Fertilizer</h2>
     <button onclick="toggleContent()">Show Fertilizer Components</button>
     <div id="fertilizerContent" class="hidden">
       <h2>Fertilizer Components:</h2>
@@ -339,9 +307,6 @@
       navigation.classList.toggle('show');
     }
   </script>
-          <footer>
-            Developed by Hastings Eneya Phiri @hephtech
-          </footer>                                                      
 </body>
 </html>
     
