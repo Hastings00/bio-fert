@@ -34,61 +34,35 @@
       background-position: center 0px;
       text-align: center;
     }
+      /* Existing styles */
 
-    nav {
-      background-color: #00563F;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap; /* Added flex-wrap to allow tabs to wrap to the next line */
-    }
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
-    nav a {
-      padding: 10px;
-      color: #fff;
-      text-decoration: none;
-      cursor: pointer;
-    }
+@media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
 
-    nav a:hover {
-      background-color: #777;
-    }
+  nav {
+    display: none; /* Initially hide the nav on small screens */
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .tab-content {
-      display: none;
-      padding: 10px;
-      margin: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
+  nav.show {
+    display: flex;
+  }
+}
 
-    .tab-content.active {
-      display: flex;
-    }
+/* Additional styling for better mobile experience */
+function toggleMenu() {
+  var navigation = document.querySelector('nav');
+  navigation.classList.toggle('show');
+}
 
-    /* Added styles for responsive menu */
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-    }
-
-    @media screen and (max-width: 600px) {
-      .menu-icon {
-        display: block;
-      }
-
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav.show {
-        display: flex;
-      }
       ftwtranslation_button {
         width: 2px;
         height:2px;
