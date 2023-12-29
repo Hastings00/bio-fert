@@ -50,30 +50,25 @@
     display: none; /* Initially hide the nav on small screens */
     flex-direction: column;
     align-items: flex-start;
+    background-color: #fff; /* Add a background color to navigation */
+    position: relative;
+    z-index: 1;
   }
 
   nav.show {
     display: flex;
   }
 }
-<!-- Add this CSS to address the issues -->
-  /* Adjustments to avoid overlapping */
-  nav {
-    background-color: #fff; /* Add a background color to navigation */
-    position: relative;
-    z-index: 1;
-  }
 
-  /* Correcting tab content visibility */
+
   .tab-content {
     display: none;
   }
 
   .tab-content.active {
     display: block;
+    
   }
-
-<!-- ... existing code ... -->
 
 <script>
   function showTab(tabId) {
