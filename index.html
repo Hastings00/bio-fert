@@ -95,6 +95,7 @@ footer a:hover {
   text-decoration: underline; /* Add underline on hover for links */
   </style>
   <script>
+  // Move this function outside of the document ready function
   function showTab(tabId) {
     var tabs = document.querySelectorAll('.tab-content');
     tabs.forEach(function (tab) {
@@ -104,16 +105,16 @@ footer a:hover {
     document.getElementById(tabId).classList.add('active');
   }
 
-  function toggleContent() {
-    var content = document.getElementById('fertilizerContent');
-    content.classList.toggle('hidden');
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    // ... existing code ...
 
-  function toggleMenu() {
-    var navigation = document.querySelector('nav');
-    navigation.classList.toggle('show');
-  }
-  </script>
+    // Call the showTab function for the default active tab
+    showTab('home');
+  });
+
+  // ... existing code ...
+</script>
+
 </head>
 <body>
   <header>
