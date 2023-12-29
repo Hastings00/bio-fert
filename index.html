@@ -56,6 +56,47 @@
     display: flex;
   }
 }
+<!-- Add this CSS to address the issues -->
+<style>
+  /* Adjustments to avoid overlapping */
+  nav {
+    background-color: #fff; /* Add a background color to navigation */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Correcting tab content visibility */
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+</style>
+
+<!-- ... existing code ... -->
+
+<script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  function toggleContent() {
+    var content = document.getElementById('fertilizerContent');
+    content.classList.toggle('hidden');
+  }
+
+  function toggleMenu() {
+    var navigation = document.querySelector('nav');
+    navigation.classList.toggle('show');
+  }
+</script>
 
 /* Additional styling for better mobile experience */
 function toggleMenu() {
