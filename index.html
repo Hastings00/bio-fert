@@ -67,26 +67,7 @@
     display: block;
   }
 
-<script>
-  function showTab(tabId) {
-    var tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(function (tab) {
-      tab.classList.remove('active');
-    });
 
-    document.getElementById(tabId).classList.add('active');
-  }
-
-  function toggleContent() {
-    var content = document.getElementById('fertilizerContent');
-    content.classList.toggle('hidden');
-  }
-
-  function toggleMenu() {
-    var navigation = document.querySelector('nav');
-    navigation.classList.toggle('show');
-  }
-</script>
 
       ftwtranslation_button {
         width: 2px;
@@ -112,6 +93,26 @@ footer a {
 footer a:hover {
   text-decoration: underline; /* Add underline on hover for links */
   </style>
+  <script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  function toggleContent() {
+    var content = document.getElementById('fertilizerContent');
+    content.classList.toggle('hidden');
+  }
+
+  function toggleMenu() {
+    var navigation = document.querySelector('nav');
+    navigation.classList.toggle('show');
+  }
+  </script>
 </head>
 <body>
   <header>
