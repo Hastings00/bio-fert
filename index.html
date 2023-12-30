@@ -95,32 +95,6 @@ footer a {
 footer a:hover {
   text-decoration: underline; /* Add underline on hover for links */
   </style>
-  <script>
-  function showTab(tabId) {
-    var tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(function (tab) {
-      tab.classList.remove('active');
-    });
-
-    document.getElementById(tabId).classList.add('active');
-  }
-
-  function toggleMenu() {
-  var nav = document.querySelector('nav');
-  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-}
-
-function showTab(tabId) {
-  var nav = document.querySelector('nav');
-  nav.style.display = 'none'; // Hide the menu when a tab is clicked
-
-  var tabs = document.querySelectorAll('.tab-content');
-  tabs.forEach(function (tab) {
-    tab.classList.remove('active');
-  });
-  document.getElementById(tabId).classList.add('active');
-}
-  </script>
 </head>
 <body>
   <header>
@@ -146,7 +120,7 @@ function showTab(tabId) {
   <!-- Your menu content goes here -->
   <h2>Welcome to Bio-Tech</h2>
   <p>Explore our sustainable fertilizer production methods and more.</p>
-
+</div>
 
   <div id="Urine-Epsom Fertilizer" class="tab-content">
     <h2>Urine,Epsom and wood Ash Fertilizer</h2>
@@ -422,7 +396,32 @@ function showTab(tabId) {
             <!-- Add Materialize CSS and JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-          </div>
+              <script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
+
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  function toggleMenu() {
+  var nav = document.querySelector('nav');
+  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+
+function showTab(tabId) {
+  var nav = document.querySelector('nav');
+  nav.style.display = 'none'; // Hide the menu when a tab is clicked
+
+  var tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(function (tab) {
+    tab.classList.remove('active');
+  });
+  document.getElementById(tabId).classList.add('active');
+}
+              </script>
           </footer>
         </body>
         </html>
