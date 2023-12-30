@@ -106,14 +106,22 @@ footer a:hover {
   }
 
   function toggleMenu() {
-    var nav = document.querySelector('nav');
-    nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-  }
+  var nav = document.querySelector('nav');
+  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
-    showTab('home');
+function showTab(tabId) {
+  var nav = document.querySelector('nav');
+  nav.style.display = 'none'; // Hide the menu when a tab is clicked
+
+  var tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(function (tab) {
+    tab.classList.remove('active');
   });
-</script>
+
+  document.getElementById(tabId).classList.add('active');
+}
+  </script>
 </head>
 <body>
   <header>
