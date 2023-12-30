@@ -104,7 +104,32 @@ footer a:hover {
   </header>
 <!-- Added menu icon for small screens -->
 <div class="menu-icon" onclick="toggleMenu()">☰</div>
+<script>
+  function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function (tab) {
+      tab.classList.remove('active');
+    });
 
+    document.getElementById(tabId).classList.add('active');
+  }
+
+  function toggleMenu() {
+  var nav = document.querySelector('nav');
+  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+}
+
+function showTab(tabId) {
+  var nav = document.querySelector('nav');
+  nav.style.display = 'none'; // Hide the menu when a tab is clicked
+
+  var tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(function (tab) {
+    tab.classList.remove('active');
+  });
+  document.getElementById(tabId).classList.add('active');
+}
+</script>
 <nav>
   <a onclick="showTab('home')">Home</a>
   <a onclick="showTab('Urine-Epsom Fertilizer')">Urine-Epsom Fertilizer</a>
@@ -396,32 +421,6 @@ footer a:hover {
             <!-- Add Materialize CSS and JS -->
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-              <script>
-  function showTab(tabId) {
-    var tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(function (tab) {
-      tab.classList.remove('active');
-    });
-
-    document.getElementById(tabId).classList.add('active');
-  }
-
-  function toggleMenu() {
-  var nav = document.querySelector('nav');
-  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-}
-
-function showTab(tabId) {
-  var nav = document.querySelector('nav');
-  nav.style.display = 'none'; // Hide the menu when a tab is clicked
-
-  var tabs = document.querySelectorAll('.tab-content');
-  tabs.forEach(function (tab) {
-    tab.classList.remove('active');
-  });
-  document.getElementById(tabId).classList.add('active');
-}
-              </script>
           </footer>
         </body>
         </html>
