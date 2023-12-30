@@ -17,14 +17,15 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      animation: colorChange 5s infinite alternate; /* Example animation: alternate color change every 5 seconds */
+      animation: colorChange 5s infinite alternate;
     }
+
     @keyframes colorChange {
       from {
-        background: #FF0000; /* Initial color */
+        background: #FF0000;
       }
       to {
-        background: #B6B6B6B6; /* Target color */
+        background: #B6B6B6B6;
       }
     }
 
@@ -34,313 +35,168 @@
       background-position: center 0px;
       text-align: center;
     }
-      /* Existing styles */
 
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
 
-@media screen and (max-width: 600px) {
-  .menu-icon {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-  }
-
-  .tab-content {
-    display: none;
-    padding: 10px;
-  }
-
-  .tab-content.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #home {
-    height: auto;
-    background-image: url('https://drive.google.com/uc?id=1L_PTkhMqV4bJHuSt2w0TOxBJwLlYr_q0');
-    background-size: cover;
-    background-position: center 0px;
-  }
-  ftwtranslation_button {
-   width: 2px;
-   height:2px;
+    @media screen and (max-width: 600px) {
+      .menu-icon {
+        display: block;
       }
-      footer {
-  background-color: #333; /* Choose a background color that fits your design */
-  color: #fff; /* Text color for better contrast */
-  padding: 20px;
-  text-align: center;
-}
 
-footer h3 {
-  margin-bottom: 10px;
-}
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+      }
 
-footer a {
-  color: #fff; /* Link color */
-  text-decoration: none;
-  margin: 0 10px;
-}
+      .tab-content {
+        display: none;
+        padding: 10px;
+      }
 
-footer a:hover {
-  text-decoration: underline; /* Add underline on hover for links */
+      .tab-content.active {
+        display: flex;
+        flex-direction: auto;
+      }
+
+      #home {
+        height: auto;
+        background-image: url('https://drive.google.com/uc?id=1L_PTkhMqV4bJHuSt2w0TOxBJwLlYr_q0');
+        background-size: cover;
+        background-position: center 0px;
+      }
+    }
+
+    /* Your existing styles */
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    function showTab(tabId) {
+      var tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(function (tab) {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
 </head>
 <body>
   <header>
-    <h1 style="margin: 0; colour: red;">Bio-Tech</h1>
-    <a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="border:0;"><img src="http://free-website-translation.com/img/fwt_button_en.gif" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;"/></a> <script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js"></script>
-    <p>"Knowledge is power"</p>
+    <h1 style="margin: 0; color: red;">Bio-Tech</h1>
+    <!-- Additional header content -->
   </header>
-<!-- Added menu icon for small screens -->
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-<script>
-  function showTab(tabId) {
-    var tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(function (tab) {
-      tab.classList.remove('active');
-    });
 
-    document.getElementById(tabId).classList.add('active');
-  }
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('Urine-Epsom Fertilizer')">Urine-Epsom Fertilizer</button>
+    <button onclick="showTab('organicBlend')">Organic Blend + Fertilizer</button>
+    <button onclick="showTab('Comprehensive-Maize Fertilizer')">Comprehensive-Maize Fertilizer</button>
+    <button onclick="showTab('Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition')">Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition</button>
+    <button onclick="showTab('help')">Help</button>
+    <button onclick="showTab('contact')">Contact</button>
+    <button onclick="showTab('developer')">Developer</button>
+  </nav>
 
-  function toggleMenu() {
-  var nav = document.querySelector('nav');
-  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-}
+  <div id="home" class="tab-content active">
+    <!-- Home tab content (empty for the home page) -->
+  </div>
+  <script>
+    function showTab(tabId) {
+      var tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(function (tab) {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
 
-function showTab(tabId) {
-  var nav = document.querySelector('nav');
-  nav.style.display = 'none'; // Hide the menu when a tab is clicked
-
-  var tabs = document.querySelectorAll('.tab-content');
-  tabs.forEach(function (tab) {
-    tab.classList.remove('active');
-  });
-  document.getElementById(tabId).classList.add('active');
-}
-</script>
-<nav>
-  <a onclick="showTab('home')">Home</a>
-  <a onclick="showTab('Urine-Epsom Fertilizer')">Urine-Epsom Fertilizer</a>
-  <a onclick="showTab('organicBlend')">Organic Blend + Fertilizer</a>
-  <a onclick="showTab('Comprehensive-Maize Fertilizer')">Comprehensive-Maize fertilizer</a>
-  <a onclick="showTab('Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition')">Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition</a>
-  <a onclick="showTab('help')">Help</a>
-  <a onclick="showTab('contact')">Contact</a>
-  <a onclick="showTab('developer')">Developer</a>
-</nav>
+    function toggleMenu() {
+      var nav = document.querySelector('nav');
+      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+</head>
+<body>
   
-<div id="home" class="tab-content active">
-  <!-- Your menu content goes here -->
-  <h2>Welcome to Bio-Tech</h2>
-  <p>Explore our sustainable fertilizer production methods and more.</p>
-</div>
-  <div id="Urine-Epsom Fertilizer" class="tab-content">
-    <h2>Urine,Epsom and wood Ash Fertilizer</h2>
-    <h2>Sustainable Fertilizer Production</h2>
-       <h1>Urine-based Fertilizer</h1>
-  <h2>Sustainable Fertilizer Production from Urine, Epsom Salt, and Wood Ash</h1>
-    <h2>Objective:</h2>
-  <p>Develop a simple and effective method to produce a balanced and sustainable fertilizer using readily available materials: urine, Epsom salt, and wood ash.</p>
-    <h2>Materials:</h2>
-  <ul>
-    <li>Urine: Rich in nitrogen, phosphorus, and potassium.</li>
-    <li>Epsom Salt (Magnesium Sulfate): Provides magnesium and sulfur.</li>
-    <li>Wood Ash: Contains potassium and other trace minerals.</li>
-  </ul>
-  <h2>Method:</h2>
-  <h3>1. Collecting Urine:</h3>
-  <p>Urine is a valuable source of nutrients like nitrogen, phosphorus, and potassium. Collect urine separately to avoid contamination with other substances.</p>
-  <h3>2. Preparing Wood Ash:</h3>
-  <ul>
-    <li>Burn untreated wood (hardwoods like oak, maple) to produce wood ash.</li>
-    <li>Allow the ash to cool and then sift out any large particles.</li>
-    <li>Store the wood ash in a dry, covered container.</li>
-  </ul>
-  <h3>3. Mixing Ingredients:</h3>
-  <p>Wear appropriate safety gear like gloves and goggles while handling chemicals. In a well-ventilated area, mix 1 part urine, 1 part Epsom salt, and 1 part wood ash. You can adjust the ratios slightly based on the specific nutrient needs of your plants.</p>
-  <h3>4. Aging the Blend:</h3>
-  <p>Place the mixture in a sealed container and let it age for a few weeks. This allows the components to break down and blend together.</p>
-  <h3>5. Application:</h3>
-  <ul>
-    <li>Before applying the fertilizer, dilute the mixture with water. A general ratio could be 1 part fertilizer mix to 10 parts water.</li>
-    <li>Apply the diluted mixture to the soil around your plants, avoiding direct contact with the foliage.</li>
-  </ul>
-  <h2>Note:</h2>
-  <ul>
-    <li>Conduct a soil test before using the fertilizer to ensure you are not over-applying nutrients.</li>
-    <li>Different plants have varying nutrient requirements, so adjust the application rates accordingly.</li>
-    <li>This project is a basic guideline. For precise nutrient ratios and plant-specific blends, consult agricultural extension services or experts in the field.</li>
-  </ul>
+  <nav>
+    <a onclick="showTab('home')">Home</a>
+    <a onclick="showTab('urineEpsomFertilizer')">Urine-Epsom Fertilizer</a>
+    <a onclick="showTab('organicBlend')">Organic Blend + Fertilizer</a>
+    <a onclick="showTab('comprehensiveMaizeFertilizer')">Comprehensive-Maize Fertilizer</a>
+    <a onclick="showTab('balancedUrineFertilizer')">Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition</a>
+    <a onclick="showTab('help')">Help</a>
+    <a onclick="showTab('contact')">Contact</a>
+    <a onclick="showTab('developer')">Developer</a>
+  </nav>
+
+  <div id="home" class="tab-content active">
+    <!-- Home tab content (empty for the home page) -->
+  </div>
+
+  <div id="urineEpsomFertilizer" class="tab-content">
+    <!-- Urine-Epsom Fertilizer content... -->
   </div>
 
   <div id="organicBlend" class="tab-content">
-    <h2>Organic Blend + Fertilizer</h2>
-    <button onclick="toggleContent()">Show Fertilizer Components</button>
-    <div id="fertilizerContent" class="hidden">
-      <h2>Fertilizer Components:</h2>
-  <ul>
-    <li>One bag of urea (20kg)</li>
-    <li>One bag of DAP (20kg)</li>
-    <li>Phosphate fertilizer bag (10kg)</li>
-    <li>10 kg of first and second round fertilizer (basal and top dressing)</li>
-    <li>5 liters of water</li>
-    <li>Plastic sheet or tarp for ground cover</li>
-    <li>Shovel</li>
-    <li>Hoe</li>
-    <li>Large sack or tarp for mixing the components</li>
-  </ul>
-  <h2>Fertilizer Components Usage:</h2>
-  <ul>
-    <li><strong>Urea (Bran)</strong>: Add essential nutrients like phosphorus and carbohydrates to improve crop growth.</li>
-    <li><strong>DAP (Dung)</strong>:
-      <ul>
-        <li>Supply necessary nutrients, especially nitrogen for poultry manure.</li>
-        <li>Use organic materials to support overall fertilizer effectiveness.</li>
-      </ul>
-    </li>
-    <li><strong>Phosphate Fertilizer (wood ash)</strong>:
-      <ul>
-        <li>Add essential nutrients.</li>
-        <li>Use safe materials to prevent fertilizer burn.</li>
-        <li>Increase nutrient absorption in our soil.</li>
-      </ul>
-    </li>
-    <li><strong>Fertilizer</strong>: Apply necessary nutrients such as nitrogen. Assist in enhancing overall fertilizer effectiveness and accelerating crop growth.</li>
-    <li><strong>Water</strong>: Provide moisture to facilitate the activation of applied fertilizers.</li>
-  </ul>
+    <!-- Organic Blend + Fertilizer content... -->
+  </div>
 
-  <h2>Application Guidelines:</h2>
-  <ul>
-    <li>Spread a plastic sheet on the ground and place the sack on it.</li>
-    <li>If applying to plants, place the plastic sheet underneath and fold it when done.</li>
-  </ul>
+  <div id="comprehensiveMaizeFertilizer" class="tab-content">
+    <!-- Comprehensive-Maize Fertilizer content... -->
+  </div>
 
-  <h2>Application Process:</h2>
-  <ul>
-    <li>Choose suitable poultry or cattle manure, ensuring it's well-composted.</li>
-    <li>Spread one bag of urea on the prepared sheet.</li>
-    <li>Add one bag of DAP and mix thoroughly.</li>
-    <li>Incorporate the phosphate fertilizer and mix well.</li>
-    <li>Include 10 kg of the chosen basal or top dressing fertilizer.</li>
-    <li>Pour 5 liters of water, distributing it evenly.</li>
-    <li>Once the mixture is complete, fold the sheet over and mix thoroughly.</li>
-    <li>Apply the fertilizer to the field, and within 21 days, positive results should be visible.</li>
-  </ul>
+  <div id="balancedUrineFertilizer" class="tab-content">
+    <!-- Balanced Urine Fertilizer Granules Formula content... -->
+  </div>
 
-  <h2>Crop Planting:</h2>
-  <ul>
-    <li>For maize, plant seeds at a depth of 10 cm, spacing them 10 cm apart.</li>
-    <li>Water the field immediately after planting.</li>
-  </ul>
+  <div id="help" class="tab-content">
+    <!-- Help content... -->
+  </div>
 
-  <h2>Harvesting:</h2>
-  <ul>
-    <li>These guidelines, along with proper hand cultivation and maintaining 260 plant stands per two square meters, ensure a bountiful harvest.</li>
-  </ul>
+  <div id="contact" class="tab-content">
+    <!-- Contact content... -->
+  </div>
 
-  <h2>Local Recommendations for DIY Fertiliser</h2>
-  <ul>
-    <li>First stage: Apply fertilizer carefully.</li>
-    <li>Second stage: All fertilizers should be in one place.</li>
-    <li>Third stage: Mix the specified components.</li>
-    <li>Fourth stage: Apply the final touch.</li>
-  </ul>
-
-  <h2>Harvesting Tips:</h2>
-  <ul>
-    <li>When plucking, pick from the base and avoid breaking the branches.</li>
-    <li>Ensure the harvested fruits are mature and firm.</li>
-  </ul><h2>Bio-Augmented Aging of Urine for Enhanced Fertilizer Production</h2>
-  <h2>Materials:</h2>
-  <ul>
-    <li>Urine Collection Containers: Clean containers for collecting human urine.</li>
-    <li>Storage Vessels: Airtight containers or barrels for aging urine.</li>
-    <li>pH Testing Kit: To monitor changes in urine acidity.</li>
-    <li>Time-Tracking Tools: Calendar or timer for monitoring aging duration.</li>
-    <li>Ventilation System: Optional for reducing ammonia odors during aging.</li>
-    <li>Bio Materials:
-      <ul>
-        <li>Compost or aged organic matter</li>
-        <li>Microbial inoculants (compost tea, effective microorganisms)</li>
-      </ul>
-    </li>
-  </ul>
-  <h2>Methods:</h2>
-  <ol>
-    <li>Urine Collection:
-      <ul>
-        <li>Collect fresh human urine in clean containers.</li>
-        <li>Ensure the urine is free from contaminants like soap or cleaning agents.</li>
-      </ul>
-    </li>
-    <li>Storage Setup:
-      <ul>
-        <li>Mix urine with compost or aged organic matter in the storage vessels to introduce beneficial microorganisms.</li>
-        <li>Transfer the mixture to airtight containers for aging.</li>
-      </ul>
-    </li>
-    <li>Aging Process:
-      <ul>
-        <li>Allow the urine and bio-material mixture to age for a specific duration (e.g., 4-8 weeks).</li>
-        <li>Monitor pH levels regularly to ensure a stable environment for nutrient transformation.</li>
-      </ul>
-    </li>
-    <li>Ventilation (Optional):
-      <ul>
-        <li>If odor is a concern, implement a ventilation system to release gases without losing essential nutrients.</li>
-      </ul>
-    </li>
-    <li>Microbial Inoculation:
-     <ul>
-        <li>Introduce microbial inoculants (compost tea, effective microorganisms) to enhance the breakdown of organic matter and nutrient release.</li>
-      </ul>
-    </li>
-    <li>pH Adjustment (Optional):
-      <ul>
-        <li>Adjust pH levels if necessary, aiming for a range suitable for plant absorption.</li>
-      </ul>
-    </li>
-    <li>Quality Assessment:
-      <ul>
-        <li>Periodically test aged urine for nutrient concentrations (nitrogen, phosphorus, potassium).</li> 
-        <ul>
-        </div>
-            <h2>   <footer>
-            <h3>Connect with us on Social Media</h3>
-            <div>
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            </div>
-            <!-- Facebook FAB with Link -->
-            <a class="btn-floating btn-large blue" href="https://www.facebook.com/eneya.phirih?mibextid=gik2fB" target="_blank">
-              <i class="material-icons">facebook</i>
-            </a>
-            <!-- TikTok FAB with Link -->
-            <a class="btn-floating btn-large pink" href="https://vm.tiktok.com/ZM6A3DEwp/" target="_blank">
-              <i class="material-icons">music_note</i>
-            </a>
-            <!-- WhatsApp FAB with Link -->
-            <a class="btn-floating btn-large green" href="https://wa.me/265888004365" target="_blank">
-              <i class="material-icons">message</i>
-            </a>
-            <!-- Instagram FAB with Link -->
-            <a class="btn-floating btn-large purple" href="https://www.instagram.com/trojanhastings?igsh=MWtzMnc4NHgzNzcwbQ==" target="_blank">
-              <i class="material-icons">camera_alt</i>
-            </a>
-            <!-- Add Materialize CSS and JS -->
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-          </footer>
-        </body>
-        </html>
+  <div id="developer" class="tab-content">
+    <!-- Developer content... -->
+  </div>
     
+  <footer>
+    <h3>Connect with us on Social Media</h3>
+    <!-- Social media links and scripts -->
+  </footer>
+</body>
+</html>
+    
+
+
+
