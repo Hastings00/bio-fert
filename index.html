@@ -113,7 +113,7 @@
     }
   </script>
 </head>
-<body>
+  <body>
   <header>
     <h1 style="margin: 0; color: red;">Bio-Tech</h1>
     <button type="button" onclick="window.location.href='http://free-website-translation.com/'" id="ftwtranslation_button" style="border:0;">
@@ -135,25 +135,6 @@
     <button onclick="showTab('developer')">Developer</button>
   </nav>
 
-  <div id="home" class="tab-content active">
-    <!-- Home tab content (empty for the home page) -->
-  </div>
-  <script>
-    function showTab(tabId) {
-      var tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(function (tab) {
-        tab.classList.remove('active');
-      });
-      document.getElementById(tabId).classList.add('active');
-    }
-
-    function toggleMenu() {
-      var nav = document.querySelector('nav');
-      nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-    }
-  </script>
-</head>
-<body>
   <div id="home" class="tab-content active">
     <!-- Home tab content (empty for the home page) -->
   </div>
