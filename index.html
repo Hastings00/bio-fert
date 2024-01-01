@@ -63,7 +63,7 @@
     footer {
       background-color: #333;
       color: #fff;
-      padding: 10px;
+      padding: 20px;
       text-align: center;
       position: fixed;
       bottom: 0;
@@ -82,6 +82,15 @@
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
     }
   </style>
   <script>
@@ -141,24 +150,27 @@
 
   <footer>
     <h4>Connect with us on Social Media</h4>
-    </style>
-<script>
-  function displayMessage() {
-    var message = "Hey there! If you ever feel like sharing your thoughts or suggesting something to improve this app, I'm all ears. Don't hesitate to reach out using any of these options:\n";
-    message += "<a class='links' href='https://www.facebook.com/eneya.phirih' target='_blank'>Connect with me on Facebook</a><br>";
-    message += "<a class='links' href='mailto:hephiri3@outlook.com'>Shoot me an email</a><br>";
-    message += "<a class='links' href='https://wa.me/+265883931480' target='_blank'>Chat with me on WhatsApp</a>";
-    document.getElementById("message").innerHTML = message;
-  }
-</script>
-</head>
-<body>
-
-<div class="info-box">
-  <button class="custom-button" onclick="displayMessage()">Share Feedback</button>
-  <p class="message" id="message"></p>
-</div>
-
+    <div class="social-icons">
+      <!-- Facebook Icon with Link -->
+      <a href="https://www.facebook.com/eneya.phirih?mibextid=gik2fB" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook">
+      </a>
+      
+      <!-- WhatsApp Icon with Link -->
+      <a href="https://wa.me/qr/2QQDDZGKXTDFE1" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+      </a>
+      
+      <!-- TikTok Icon with Link -->
+      <a href="https://vm.tiktok.com/ZM6faYHBS/" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok">
+      </a>
+      
+      <!-- Instagram Icon with Link -->
+      <a href="https://www.instagram.com/trojanhastings?igsh=MWtzMnc4NHgzNzcwbQ==" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+      </a>
+    </div>
   </footer>
 
   <div id="developer" class="tab-content">
@@ -167,4 +179,3 @@
 </body>
 
 </html>
-    
