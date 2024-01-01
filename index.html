@@ -141,7 +141,24 @@
 
   <footer>
     <h4>Connect with us on Social Media</h4>
-    <!-- Social media icons with links... -->
+    </style>
+<script>
+  function displayMessage() {
+    var message = "Hey there! If you ever feel like sharing your thoughts or suggesting something to improve this app, I'm all ears. Don't hesitate to reach out using any of these options:\n";
+    message += "<a class='links' href='https://www.facebook.com/eneya.phirih' target='_blank'>Connect with me on Facebook</a><br>";
+    message += "<a class='links' href='mailto:hephiri3@outlook.com'>Shoot me an email</a><br>";
+    message += "<a class='links' href='https://wa.me/+265883931480' target='_blank'>Chat with me on WhatsApp</a>";
+    document.getElementById("message").innerHTML = message;
+  }
+</script>
+</head>
+<body>
+
+<div class="info-box">
+  <button class="custom-button" onclick="displayMessage()">Share Feedback</button>
+  <p class="message" id="message"></p>
+</div>
+
   </footer>
 
   <div id="developer" class="tab-content">
