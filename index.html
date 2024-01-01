@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bio-Tech</title>
   <style>
     body {
-  font-family: 'Times New Roman';
-  font-size: 16px;
-  background-size: cover;
-  background-position: center 0px;
-  transition: background-position 0.5s ease-in-out;
-  margin: 0;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  animation: colorChange 5s infinite alternate;
-  flex-grow: 1; /* Add this line */
-  align-items: centre;
-}
-      @keyframes colorChange {
-      from {
-        background: #FF0000;
-      }
-      to {
-        background: #B6B6B6B6;
-      }
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      background: #F5F5F5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
     }
 
     header {
@@ -34,57 +23,55 @@
       background-size: cover;
       background-position: center 0px;
       text-align: center;
-      position: top;
+      padding: 20px;
+      color: white;
     }
 
-    .menu-icon {
-      display: none;
+    h1 {
+      margin: 0;
+      color: #4CAF50;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #4CAF50;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 10px;
+      color: white;
+      text-decoration: none;
       cursor: pointer;
     }
 
-    @media screen and (max-width: 600px) {
-      .menu-icon {
-        display: inline;
-      }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-      nav {
-        display: none;
-        flex-direction: column;
-        align-items: flex-wrap;
-        position: top;
-      }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      color: #333;
+    }
 
-      .tab-content {
-        display: none;
-        padding: 2px;
-      }
-
-      #home {
-        height: 5px;
-        background-image: url('https://drive.google.com/uc?id=1L_PTkhMqV4bJHuSt2w0TOxBJwLlYr_q0');
-        background-size: cover;
-        background-position: center 0px;
-      }
-      #ftwtranslation_button {
-  background-color: #FFF000;
-  width: 0px;
-  height: 0px;
-}
-
+    .active {
+      display: block;
+    }
 
     footer {
-      background-color: #8F80;
+      background-color: #333;
       color: #fff;
-      padding: 5px;
+      padding: 10px;
       text-align: center;
-      position: fixed; /* Add this line */
-      bottom: 0; /* Add this line */
-      width: 100%; /* Add this line */
-
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     footer h4 {
-      margin-bottom: 0px;
+      margin-bottom: 10px;
     }
 
     footer a {
@@ -112,116 +99,55 @@
     }
   </script>
 </head>
-  <body>
-    <header>
-    <h1 style="margin: 0; color: red;">Bio-Tech</h1>
+
+<body>
+  <header>
+    <h1>Bio-Tech</h1>
+    <button class="menu-icon" onclick="toggleMenu()">☰</button>
     <button type="button" onclick="window.location.href='http://free-website-translation.com/'" id="ftwtranslation_button" style="border:0;">
-  <img src="https://drive.google.com/uc?id=1Lw_CUvUc9bLwW6tuUl_pJbZbFvE8Fe0F" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;">
-</button>
-<script type="text/javascript" src="http://free-website-translation.com/scripts/fwt.js"></script>
+      <img src="https://drive.google.com/uc?id=1Lw_CUvUc9bLwW6tuUl_pJbZbFvE8Fe0F" id="ftwtranslation_image" alt="FWT Homepage Translator" style="border:0;">
+    </button>
     <p>"Knowledge is power"</p>
   </header>
-<div id="home" class="tab-content active">
-    <!-- Home tab content (empty for the home page) -->
-</div>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
   <nav>
     <a onclick="showTab('home')">Home</a>
     <a onclick="showTab('Urine_Epsom_Fertilizer')">Urine-Epsom Fertilizer</a>
     <a onclick="showTab('organicBlend')">Organic Blend + Fertilizer</a>
-    <a onclick="showTab('Balanced_Urine_Fertilizer_Granules_Formula_for_Maize_Crop_Nutrition')">Balanced Urine Fertilizer Granules Formula for Maize Crop Nutrition</a>
+    <a onclick="showTab('Balanced_Urine_Fertilizer_Granules_Formula_for_Maize_Crop_Nutrition')">Balanced Urine Fertilizer Granules Formula</a>
     <a onclick="showTab('help')">Help</a>
     <a onclick="showTab('developer')">Developer</a>
   </nav>
-<div id="Urine_Epsom_Fertilizer" class="tab-content">
-<h2>Liquid Urine, Epsom Salt, and Wood Ash Fertilizer</h2>
-<p><strong>Ingredients:</strong></p>
-  <ul>
-    <li>Urine: Rich in nitrogen, phosphorus, and potassium.</li>
-    <li>Epsom Salt (Magnesium Sulfate): Provides magnesium and sulfur.</li>
-    <li>Wood Ash: Contains potassium and other trace minerals.</li>
-    <li>Water: To create a liquid form.</li>
-  </ul>
-  
-  <p><strong>Method:</strong></p>
-  <ol>
-    <li>Collect urine separately to avoid contamination.</li>
-    <li>Burn untreated wood to produce ash. Allow ash to cool, sift out large particles, and store in a dry container.</li>
-    <li>In a well-ventilated area, mix 1 part urine, 1 part Epsom salt, and 1 part wood ash.</li>
-    <li>Dilute the mixture with water to create a liquid fertilizer. Use a ratio of 1 part fertilizer mix to 10 parts water, or adjust based on specific plant needs.</li>
-    <li>Pour or spray the diluted liquid fertilizer around the base of plants. Avoid direct contact with foliage.</li>
-  </ol>
-  
-  <p><strong>Note:</strong></p>
-  <ul>
-    <li>Conduct a soil test before use.</li>
-    <li>Adjust ratios based on specific plant needs.</li>
-    <li>This is a basic guideline; consult experts for precise blends.</li>
-  </ul>
 
-  <p><strong>Application Guidelines:</strong></p>
-  <ul>
-    <li><strong>Crops:</strong> Suitable for various crops, including vegetables, fruits, and flowers.</li>
-    <li><strong>Nitrogen-Loving Crops:</strong> Beneficial for leafy greens.</li>
-    <li><strong>Fruit-Bearing Crops:</strong> Supports fruit development.</li>
-    <li><strong>Root Vegetables:</strong> The phosphorus content aids root growth.</li>
-  </ul>
+  <div id="home" class="tab-content active">
+    <!-- Home tab content (empty for the home page) -->
+  </div>
 
-  <p><strong>Application Tips:</strong></p>
-  <ul>
-    <li><strong>Frequency:</strong> Apply every 2-4 weeks during the growing season.</li>
-    <li><strong>Morning Application:</strong> Apply in the morning to allow absorption during the day.</li>
-    <li><strong>Adjustments:</strong> Monitor plant health and adjust the frequency or dilution based on responses.</li>
-  </ul>
+  <div id="Urine_Epsom_Fertilizer" class="tab-content">
+    <!-- Content for Urine-Epsom Fertilizer... -->
   </div>
 
   <div id="organicBlend" class="tab-content">
-    <!-- Organic Blend + Fertilizer content... -->
+    <!-- Content for Organic Blend + Fertilizer... -->
   </div>
 
-  <div id="balancedUrineFertilizer" class="tab-content">
-    <!-- Balanced Urine Fertilizer Granules Formula content... -->
+  <div id="Balanced_Urine_Fertilizer_Granules_Formula_for_Maize_Crop_Nutrition" class="tab-content">
+    <!-- Content for Balanced Urine Fertilizer Granules Formula... -->
   </div>
 
   <div id="help" class="tab-content">
     <!-- Help content... -->
   </div>
 
-    <footer>
+  <footer>
     <h4>Connect with us on Social Media</h4>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Social media icons with links... -->
+  </footer>
 
-<!-- Facebook FAB with Link -->
-<a class="btn-floating btn-large blue" href="https://www.facebook.com/eneya.phirih?mibextid=gik2fB" target="_blank">
-  <i class="material-icons">facebook</i>
-</a>
-
-<!-- TikTok FAB with Link -->
-<a class="btn-floating btn-large pink" href="https://vm.tiktok.com/ZM6A3DEwp/" target="_blank">
-  <i class="material-icons">music_note</i>
-</a>
-
-<!-- WhatsApp FAB with Link -->
-<a class="btn-floating btn-large green" href="https://wa.me/265888004365" target="_blank">
-  <i class="material-icons">message</i>
-</a>
-
-<!-- Instagram FAB with Link -->
-<a class="btn-floating btn-large purple" href="https://www.instagram.com/trojanhastings?igsh=MWtzMnc4NHgzNzcwbQ==" target="_blank">
-  <i class="material-icons">camera_alt</i>
-</a>
-
-<!-- Add Materialize CSS and JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </footer> 
   <div id="developer" class="tab-content">
-   <p>Sponsored by TechAdventures</p>
+    <p>Sponsored by TechAdventures</p>
   </div>
 </body>
+
 </html>
     
-
-
-
