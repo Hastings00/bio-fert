@@ -107,6 +107,26 @@
       nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
     }
   </script>
+  
+  <script>
+    // Function to update the date and time
+    function updateDateTime() {
+      var now = new Date();
+      var dateElement = document.getElementById('currentDate');
+      dateElement.textContent = now.toDateString();
+
+      var timeElement = document.getElementById('currentTime');
+      timeElement.textContent = now.toLocaleTimeString();
+    }
+
+    // Show the current date and time when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      updateDateTime();
+    });
+
+    // Periodically update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
 </head>
 
 <body>
@@ -323,6 +343,12 @@
       <a href="https://www.instagram.com/trojanhastings?igsh=MWtzMnc4NHgzNzcwbQ==" target="_blank">
         <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
       </a>
+    </div>
+    
+    <!-- Display current date and time -->
+    <div id="datetime-container">
+      <p id="currentDate"></p>
+      <p id="currentTime"></p>
     </div>
   </footer>
 
