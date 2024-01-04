@@ -1026,7 +1026,66 @@
 
     <p>We appreciate your interest in Bio-Tech, and we're dedicated to providing the best support for your gardening and fertilizer-related queries!</p>
   </div>
+<div id="scriptContainer">
+  <style>
+    /* Overall container styling */
+    body {
+      margin: 0; /* Remove default body margin */
+      padding: 0; /* Remove default body padding */
+      box-sizing: border-box;
+    }
 
+    /* Container for content */
+    #container {
+      text-align: center; /* Center align content */
+      padding: 20px;
+    }
+
+    /* Initially hide the iframe */
+    #documentFrame {
+      display: none;
+      width: 100%;
+      height: 500px;
+    }
+
+    /* Style for the button */
+    #getPdfButton {
+      background-color: #3498db; /* Set your desired color */
+      color: #fff; /* Text color */
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px; /* Add some space below the button */
+    }
+  </style>
+
+  <!-- Add a styled button to open the PDF in the iframe -->
+  <div>
+    <button id="getPdfButton" onclick="openPdf()">Get PDF</button>
+  </div>
+
+  <!-- Use an iframe for displaying the PDF preview -->
+  <div>
+    <iframe id="documentFrame" src=""></iframe>
+  </div>
+
+  <script>
+    // Function to open the PDF in the iframe
+    function openPdf() {
+      // Replace 'YOUR_FILE_ID' with the actual file ID from Google Drive
+      var documentId = "16JFDtuU9dTbX3X9wsPRhzq2CI6rAdX_t";
+      var documentUrl = "https://drive.google.com/file/d/" + documentId + "/preview";
+
+      // Show the iframe
+      var iframe = document.getElementById("documentFrame");
+      iframe.style.display = "block";
+
+      // Set the iframe source to the Google Drive preview link
+      iframe.src = documentUrl;
+    }
+  </script>
+</div>
   <div id="developer" class="tab-content">
     <h2>Developer: Hastings Eneya Phiri</h2>
     <p>Year: 2024</p>
@@ -1096,5 +1155,6 @@
       <p id="currentTime"></p>
     </div>
   </footer>
+
 </body>
 </html>
