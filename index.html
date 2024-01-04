@@ -983,41 +983,6 @@
 </body>
 </html>
 </div>
-<div>
-<!-- Add a styled button to open the PDF in the iframe -->
-  <button id="open.Pdf" style="
-      background-color: #3498db;
-      /* Set your desired color */
-      color: #fff;
-      /* Text color */
-      padding: 10px 20px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-    " onclick="openPdf()">Open PDF</button>
-
-  <!-- Use an iframe for displaying the PDF preview -->
-  <iframe id="documentFrame" width="100%" height="500" src="" style="display: none;"></iframe>
-
-  <!-- Script directly within a div -->
-  <div id="scriptContainer">
-    <script>
-      // Function to open the PDF in the iframe
-      function openPdf() {
-        // Replace 'YOUR_FILE_ID' with the actual file ID from Google Drive
-        var documentId = "16JFDtuU9dTbX3X9wsPRhzq2CI6rAdX_t";
-        var documentUrl = "https://drive.google.com/file/d/" + documentId + "/preview";
-
-        // Show the iframe
-        var iframe = document.getElementById("documentFrame");
-        iframe.style.display = "block";
-
-        // Set the iframe source to the Google Drive preview link
-        iframe.src = documentUrl;
-      }
-    </script>
-  </div>
- 
   <div id="help" class="tab-content">
     <h2>Help</h2>
     <p>If you need assistance or have any inquiries, feel free to reach out to our support team. We're here to help you!</p>
