@@ -175,12 +175,29 @@ footer a:hover {
     // Periodically update the date and time every second
     setInterval(updateDateTime, 1000);
   </script>
+  <script>
+    const images = document.querySelectorAll('#imageContainer img');
+    let index = 0;
+
+    function showImage() {
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+        index = (index + 1) % images.length;
+    }
+
+    setInterval(showImage, 3000); // Change image every 3 seconds
+  </script>
 </head>
 
 <body>
   <header>
-    <img src="https://i.imgocean.com/InShot_20240127_150940668879aa7090cbe0383.jpeg" alt="InShot_20240127_150940668879aa7090cbe0383.jpeg" style="max-width: 1500px; height: auto; border-radius: 4px; object-fit: cover; border: 0;">
-    <button style="border: none; padding: 0; background: none; cursor: pointer; display: flex; align-items: center;">
+    <div id="imageContainer">
+    <img src="https://i.imgocean.com/InShot_20240127_150940668879aa7090cbe0383.jpeg" alt="InShot_20240127_150940668879aa7090cbe0383.jpeg" style="max-width: 1500px; height: auto; border-radius: 4px; object-fit: cover; border: 0;" class="active">
+    <img src="https://i.imgocean.com/InShot_20240128_165149135b6d265b55aa56c48.jpeg" alt="InShot_20240128_165149135b6d265b55aa56c48.jpeg" style="max-width: 1500px; height: auto; border-radius: 4px; object-fit: cover; border: 0;">
+    <img src="https://i.imgocean.com/Photo_1704031624797ba28fe6923b384ff.png" alt="Photo_1704031624797ba28fe6923b384ff.png" style="max-width: 1500px; height: auto; border-radius: 4px; object-fit: cover; border: 0;">
+    <img src="https://i.imgocean.com/top-view-plants_23-2148175929548af6909832b69b.jpeg" alt="top-view-plants_23-2148175929548af6909832b69b.jpeg" style="max-width: 1500px; height: auto; border-radius: 4px; object-fit: cover; border: 0;">
+    </div>
+     <button style="border: none; padding: 0; background: none; cursor: pointer; display: flex; align-items: center;">
     <a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="text-decoration: none;">
         <img src="https://i.imgur.com/vmEA7OC.jpg" id="ftwtranslation_image" alt="FWT Homepage Translator" style="width: 20%; height: 20%; border-radius: 4px; object-fit: cover;">
     </a>
