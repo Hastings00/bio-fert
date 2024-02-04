@@ -1113,23 +1113,6 @@ footer a:hover {
       <p>TechAdventures ® All rights reserved</p>
     </div>
   </footer>
-   <div id="imageContainer" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;">
-  <div class="background-image" style="background-image: url('https://i.imgocean.com/Photo_1704031624797ba28fe6923b384ff.png');"></div>
-  <div class="background-image" style="background-image: url('https://i.imgocean.com/top-view-plants_23-2148175929548af6909832b69b.jpeg');"></div>
-</div>
-<script>
-    const backgroundImages = document.querySelectorAll('#imageContainer .background-image');
-    let index = 0;
-
-    function showBackgroundImage() {
-        backgroundImages.forEach(bg => bg.style.opacity = 0);
-        backgroundImages[index].style.opacity = 1;
-        index = (index + 1) % backgroundImages.length;
-    }
-
-    showBackgroundImage(); // Show the first background image initially
-
-    setInterval(showBackgroundImage, 3000); // Change background image every 3 seconds
-</script>
+   
 </body>
 </html>
