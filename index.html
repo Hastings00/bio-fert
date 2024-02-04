@@ -175,20 +175,6 @@ footer a:hover {
     // Periodically update the date and time every second
     setInterval(updateDateTime, 1000);
   </script>
-  <script>
-    const images = document.querySelectorAll('#imageContainer img');
-    let index = 0;
-
-    function showImage() {
-        images.forEach(img => img.style.opacity = 0);
-        images[index].style.opacity = 1;
-        index = (index + 1) % images.length;
-    }
-
-    showImage(); // Show the first image initially
-
-    setInterval(showImage, 3000); // Change image every 3 seconds
-  </script>
 </head>
 
 <body>
@@ -1138,5 +1124,19 @@ footer a:hover {
       <p>TechAdventures ® All rights reserved</p>
     </div>
   </footer>
+   <script>
+    const images = document.querySelectorAll('#imageContainer img');
+    let index = 0;
+
+    function showImage() {
+        images.forEach(img => img.style.opacity = 0);
+        images[index].style.opacity = 1;
+        index = (index + 1) % images.length;
+    }
+
+    showImage(); // Show the first image initially
+
+    setInterval(showImage, 3000); // Change image every 3 seconds
+  </script>
 </body>
 </html>
