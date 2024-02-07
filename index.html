@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bio-Fert</title>
   <style>
+     header {
+    position: relative;
+    text-align: center;
+    background-color: red;
+    padding: 20px;
+  }
+
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #4CAF50, #008CBA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #imageContainer {
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 20px;
+    position: relative;
+    width: 50%;
+    height: 300px; /* Adjust height as needed */
+  }
+
+  #imageContainer img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #imageContainer img.active {
+    opacity: 1;
+  }
   body { 
     background-color: rgba(255, 255, 255, 0.8);
     font-family: 'Arial', sans-serif;
@@ -196,45 +239,29 @@ footer a:hover {
   </script>
 </head>
 <body>
-
-
-<header style="position: relative; text-align: center; background-color: red; padding: 20px;">
-  <h2 style="
-    font-family: Arial, sans-serif;
-    font-size: 2.5em;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    background: linear-gradient(45deg, #4CAF50, #008CBA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  ">
-    Bio-Fert Technological Integration
-  </h2>
-  <div id="imageContainer" style="display: inline-block; overflow: hidden; margin-top: 20px; position: relative; width: 50%; height: 50%;">
-    <img src="https://i.imgocean.com/InShot_20240127_150940668879aa7090cbe0383.jpeg" alt="Image 1" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 1s ease-in-out;">
-    <img src="https://i.imgocean.com/InShot_20240128_165149135b6d265b55aa56c48.jpeg" alt="Image 2" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;">
-    <img src="https://i.imgocean.com/Photo_1704031624797ba28fe6923b384ff.png" alt="Image 3" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;">
-    <img src="https://i.imgocean.com/top-view-plants_23-2148175929548af6909832b69b.jpeg" alt="Image 4" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 1s ease-in-out;">
+  <header>
+  <h2>Bio-Fert Technological Integration</h2>
+  <div id="imageContainer">
+    <img src="https://i.imgocean.com/InShot_20240127_150940668879aa7090cbe0383.jpeg" alt="Image 1" class="active">
+    <img src="https://i.imgocean.com/InShot_20240128_165149135b6d265b55aa56c48.jpeg" alt="Image 2">
+    <img src="https://i.imgocean.com/Photo_1704031624797ba28fe6923b384ff.png" alt="Image 3">
+    <img src="https://i.imgocean.com/top-view-plants_23-2148175929548af6909832b69b.jpeg" alt="Image 4">
   </div>
 </header>
 
 <script>
-  let currentImageIndex = 0;
+  // JavaScript for slideshow
   const images = document.querySelectorAll('#imageContainer img');
+  let index = 0;
 
   function nextImage() {
-    images[currentImageIndex].style.opacity = 0;
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    images[currentImageIndex].style.opacity = 1;
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
   }
 
-  setInterval(nextImage, 3000);
+  setInterval(nextImage, 3000); // Change image every 3 seconds
 </script>
-
 
      <button style="border: none; padding: 0; background: none; cursor: pointer; display: flex; align-items: center;">
      <a href="http://free-website-translation.com/" id="ftwtranslation_button" hreflang="en" title="" style="text-decoration: none;">
