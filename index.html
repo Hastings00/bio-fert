@@ -202,7 +202,42 @@ footer a:hover {
 .background-image.active {
   opacity: 1;
 }
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
+.comment-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
 </style>
   <script>
     function showTab(tabId) {
@@ -237,6 +272,47 @@ footer a:hover {
     // Periodically update the date and time every second
     setInterval(updateDateTime, 1000);
   </script>
+  <script>
+    // Function to add a new comment
+function addComment() {
+  var commentInput = document.getElementById("comment-input");
+  var commentText = commentInput.value.trim();
+  
+  if (commentText !== "") {
+    var commentList = document.getElementById("comment-list");
+    var listItem = document.createElement("li");
+    listItem.className = "comment";
+    listItem.innerHTML = "<p>" + commentText + "</p>";
+    commentList.appendChild(listItem);
+    
+    // Clear input field after adding comment
+    commentInput.value = "";
+    
+    // Add creation date to the comment
+    var currentDate = new Date();
+    listItem.dataset.creationDate = currentDate.toISOString();
+  }
+}
+
+// Function to delete comments older than 10 days
+function deleteOldComments() {
+  var commentList = document.getElementById("comment-list");
+  var comments = commentList.getElementsByClassName("comment");
+  var currentDate = new Date();
+  var tenDaysAgo = new Date(currentDate.getTime() - (10 * 24 * 60 * 60 * 1000)); // 10 days ago
+  
+  // Loop through comments and remove those older than 10 days
+  for (var i = 0; i < comments.length; i++) {
+    var commentDate = new Date(comments[i].dataset.creationDate);
+    if (commentDate < tenDaysAgo) {
+      commentList.removeChild(comments[i]);
+    }
+  }
+}
+
+// Call deleteOldComments every 24 hours
+setInterval(deleteOldComments, 24 * 60 * 60 * 1000); // Run every 24 hours
+  </script
 </head>
 <body>
   <header>
@@ -250,7 +326,6 @@ footer a:hover {
     <img src="https://i.imgocean.com/top-view-plants_23-2148175929548af6909832b69b.jpeg" alt="Image 4">
   </div>
 </header>
-
 <script>
   // JavaScript for slideshow
   const images = document.querySelectorAll('#imageContainer img');
@@ -1201,6 +1276,15 @@ footer a:hover {
       <p>TechAdventures ® All rights reserved</p>
     </div>
   </footer>
-   
+   <div class="comment-container">
+  <h2>Comments</h2>
+  <ul id="comment-list">
+    <!-- Comments will be dynamically added here -->
+  </ul>
+  <input type="text" id="comment-input" placeholder="Add a comment...">
+  <button onclick="addComment()">Add</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
